@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { Menu, X, ArrowRight, Mail, MapPin, Instagram } from "lucide-react";
+import { Menu, X, ArrowRight, Mail, MapPin } from "lucide-react";
 
 const artworks = [
   {
