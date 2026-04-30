@@ -284,7 +284,7 @@ function Contact() {
 
           <div className="mt-10 grid gap-5">
             <div className="flex items-center gap-4 text-stone-300"><Mail size={18} /> studio@tlemahieu.com</div>
-            <div className="flex items-center gap-4 text-stone-300"><Instagram size={18} /> @truusjelemahieu</div>
+            <div className="flex items-center gap-4 text-stone-300"><span className="text-lg">@</span> @truusjelemahieu</div>
             <div className="flex items-center gap-4 text-stone-300"><MapPin size={18} /> Available for international inquiries</div>
           </div>
         </div>
