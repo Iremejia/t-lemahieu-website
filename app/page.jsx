@@ -3,109 +3,104 @@
 import React, { useEffect, useState } from "react";
 
 const works = [
-  { id: "c1", cat: "xl", span: "span7", nameEn: "Deep Current", nameEs: "Corriente Profunda", meta: "Acrylic · 200 × 150 cm · XL", priceEn: "From €4,500", priceEs: "Desde €4,500", palette: ["#1A3461","#1D8C75","#0D5C8C","#2BA88A","#E8553A","#1D5C8C"], type: "swirl" },
-  { id: "c2", cat: "large", span: "span5", nameEn: "Tropical Spiral", nameEs: "Espiral Tropical", meta: "Acrylic · 100 × 80 cm · Large", priceEn: "From €1,800", priceEs: "Desde €1,800", palette: ["#1D3461","#E8553A","#C2185B","#1D8C75","#ffffff"], type: "swirl" },
-  { id: "c3", cat: "mini", span: "span4", nameEn: "Origin I", nameEs: "Origen I", meta: "30 × 30 cm · Mini", priceEn: "Set of 5 from €1,200", priceEs: "Set de 5 desde €1,200", palette: ["#E85530","#C2185B","#F4A200"], type: "mini" },
-  { id: "c4", cat: "mini", span: "span4", nameEn: "Origin II", nameEs: "Origen II", meta: "30 × 30 cm · Mini", priceEn: "Available as set", priceEs: "Disponible en set", palette: ["#1D8C75","#1A2B4A","#2BA88A"], type: "mini" },
-  { id: "c5", cat: "medium", span: "span4", nameEn: "Forest Rhythm", nameEs: "Ritmo de Selva", meta: "60 × 60 cm · Medium", priceEn: "From €900", priceEs: "Desde €900", palette: ["#1D8C75","#2E7D32","#C2185B","#E8553A","#F4A200"], type: "dots" },
-  { id: "c6", cat: "large", span: "span8", nameEn: "Caribbean Light", nameEs: "Luz Caribe", meta: "Acrylic · 180 × 80 cm · Large", priceEn: "From €3,200", priceEs: "Desde €3,200", palette: ["#C2185B","#E8553A","#F4A200","#1D8C75","#1A3461","#ffffff"], type: "bold" },
-  { id: "c7", cat: "cacao", span: "span4", nameEn: "Cacao I", nameEs: "Cacao I", meta: "80 × 100 cm · Cacao Series", priceEn: "From €1,600", priceEs: "Desde €1,600", palette: ["#5C3A1E","#8B5A2B","#C8922A","#E8553A","#3D1F0A","#A0522D"], type: "cacao" },
+  {
+    cat: "xl",
+    span: "span7",
+    nameEn: "Blue Current",
+    nameEs: "Corriente Azul",
+    meta: "Grand format · XL",
+    priceEn: "Available upon inquiry",
+    priceEs: "Disponible bajo consulta",
+    image: "/images/work-xl.jpg",
+  },
+  {
+    cat: "large",
+    span: "span5",
+    nameEn: "Chromatic Living Room",
+    nameEs: "Salón Cromático",
+    meta: "Large format · Interior placement",
+    priceEn: "Commission or original",
+    priceEs: "Original o por encargo",
+    image: "/images/large-premium-living.jpg",
+  },
+  {
+    cat: "mini",
+    span: "span4",
+    nameEn: "Mini Set",
+    nameEs: "Set Mini",
+    meta: "Mini · Set composition",
+    priceEn: "Sets available",
+    priceEs: "Sets disponibles",
+    image: "/images/mini-bedroom.jpg",
+  },
+  {
+    cat: "mini",
+    span: "span4",
+    nameEn: "Black & White Set",
+    nameEs: "Set Blanco y Negro",
+    meta: "Mini · 10-piece composition",
+    priceEn: "By set",
+    priceEs: "Por set",
+    image: "/images/set-composition-10.jpg",
+  },
+  {
+    cat: "medium",
+    span: "span4",
+    nameEn: "Green Rhythm",
+    nameEs: "Ritmo Verde",
+    meta: "Medium format",
+    priceEn: "Available upon inquiry",
+    priceEs: "Disponible bajo consulta",
+    image: "/images/medium-bench.jpg",
+  },
+  {
+    cat: "large",
+    span: "span8",
+    nameEn: "Caribbean Pulse",
+    nameEs: "Pulso Caribe",
+    meta: "Large format · Interior placement",
+    priceEn: "Commission or original",
+    priceEs: "Original o por encargo",
+    image: "/images/work-large-blue.jpg",
+  },
+  {
+    cat: "medium",
+    span: "span4",
+    nameEn: "Corner Composition",
+    nameEs: "Composición de Esquina",
+    meta: "Medium format",
+    priceEn: "Available upon inquiry",
+    priceEs: "Disponible bajo consulta",
+    image: "/images/medium-corner.jpg",
+  },
 ];
 
 const archiveItems = [
-  { year: "93", venue: "La Irreverencia del Color", loc: "Galería Hollywood, Caracas", typeEn: "Solo exhibition", typeEs: "Exposición individual" },
-  { year: "92", venue: "Karl Ernst Osthaus Museum", loc: "Hagen, Germany", typeEn: "Group exhibition", typeEs: "Exposición colectiva" },
-  { year: "94", venue: "Art Fair Miami", loc: "Miami, USA", typeEn: "International fair", typeEs: "Feria internacional" },
-  { year: "94", venue: "International Exhibition", loc: "Moscow, Russia", typeEn: "International", typeEs: "Internacional" },
-  { year: "95", venue: "Design Center Torre Humbolt", loc: "Caracas, Venezuela", typeEn: "Design & Art", typeEs: "Diseño y Arte" },
-  { year: "97", venue: "Hilton Caracas", loc: "Caracas, Venezuela", typeEn: "Hospitality exhibition", typeEs: "Exposición hotelera" },
+  {
+    year: "99",
+    venue: "Metro feature",
+    loc: "Belgium · Press archive",
+    typeEn: "Press",
+    typeEs: "Prensa",
+    image: "/images/archive-press.jpg",
+  },
+  {
+    year: "Studio",
+    venue: "Large-scale work in progress",
+    loc: "Artist studio",
+    typeEn: "Process",
+    typeEs: "Proceso",
+    image: "/images/archive-studio.jpg",
+  },
+  {
+    year: "Now",
+    venue: "Artist at work",
+    loc: "Detail and signature",
+    typeEn: "Studio",
+    typeEs: "Estudio",
+    image: "/images/truusje-portrait.jpg",
+  },
 ];
-
-function drawArtwork(canvas, colors, type) {
-  if (!canvas) return;
-  const parent = canvas.parentElement;
-  const rect = parent.getBoundingClientRect();
-  canvas.width = Math.max(rect.width, 320);
-  canvas.height = Math.max(rect.height, 240);
-  const ctx = canvas.getContext("2d");
-  const w = canvas.width;
-  const h = canvas.height;
-
-  ctx.clearRect(0, 0, w, h);
-  ctx.fillStyle = colors[0];
-  ctx.fillRect(0, 0, w, h);
-
-  if (type === "swirl") {
-    for (let i = 0; i < 140; i++) {
-      const a = i * 0.28;
-      const r = i * 3.8;
-      const x = w / 2 + Math.cos(a) * r;
-      const y = h / 2 + Math.sin(a) * r;
-      ctx.beginPath();
-      ctx.ellipse(x, y, 16, 9, a, 0, Math.PI * 2);
-      ctx.fillStyle = colors[i % colors.length];
-      ctx.globalAlpha = 0.88;
-      ctx.fill();
-    }
-  }
-
-  if (type === "bold") {
-    for (let i = 0; i < 18; i++) {
-      ctx.beginPath();
-      ctx.ellipse(Math.random() * w, Math.random() * h, 55 + Math.random() * 90, 45 + Math.random() * 70, Math.random() * Math.PI, 0, Math.PI * 2);
-      ctx.fillStyle = colors[i % colors.length];
-      ctx.globalAlpha = 0.9;
-      ctx.fill();
-    }
-    ctx.strokeStyle = "#1C1C1C";
-    ctx.lineWidth = 3.5;
-    ctx.globalAlpha = 0.5;
-    for (let i = 0; i < 6; i++) {
-      ctx.beginPath();
-      ctx.arc(Math.random() * w, Math.random() * h, 18 + Math.random() * 38, 0, Math.PI * 2);
-      ctx.stroke();
-    }
-  }
-
-  if (type === "mini") {
-    ctx.fillStyle = colors[1];
-    ctx.fillRect(0, 0, w, h);
-    ctx.beginPath();
-    ctx.ellipse(w / 2, h / 2, w * 0.38, h * 0.38, 0, 0, Math.PI * 2);
-    ctx.fillStyle = colors[2];
-    ctx.globalAlpha = 1;
-    ctx.fill();
-    ctx.beginPath();
-    ctx.ellipse(w / 2, h / 2, w * 0.22, h * 0.22, 0, 0, Math.PI * 2);
-    ctx.fillStyle = colors[0];
-    ctx.fill();
-  }
-
-  if (type === "dots") {
-    for (let row = 0; row < 22; row++) {
-      for (let col = 0; col < 45; col++) {
-        ctx.beginPath();
-        ctx.ellipse((col * w) / 42 + Math.random() * 6, (row * h) / 20 + Math.random() * 6, 9, 5, Math.random() * Math.PI, 0, Math.PI * 2);
-        ctx.fillStyle = colors[(row + col) % colors.length];
-        ctx.globalAlpha = 0.9;
-        ctx.fill();
-      }
-    }
-  }
-
-  if (type === "cacao") {
-    ctx.fillStyle = "#2E1208";
-    ctx.fillRect(0, 0, w, h);
-    for (let i = 0; i < 90; i++) {
-      ctx.beginPath();
-      ctx.ellipse(Math.random() * w, Math.random() * h, 14 + Math.random() * 22, 7 + Math.random() * 14, Math.random() * Math.PI, 0, Math.PI * 2);
-      ctx.fillStyle = colors[i % colors.length];
-      ctx.globalAlpha = 0.85;
-      ctx.fill();
-    }
-  }
-  ctx.globalAlpha = 1;
-}
 
 function T({ lang, en, es }) {
   return <>{lang === "en" ? en : es}</>;
@@ -116,10 +111,6 @@ export default function TruusjeWebsite() {
   const [filter, setFilter] = useState("all");
 
   useEffect(() => {
-    const drawAll = () => works.forEach((work) => drawArtwork(document.getElementById(work.id), work.palette, work.type));
-    const timer = setTimeout(drawAll, 150);
-    window.addEventListener("resize", drawAll);
-
     const observer = new IntersectionObserver(
       (entries) => entries.forEach((entry) => { if (entry.isIntersecting) entry.target.classList.add("on"); }),
       { threshold: 0.08 }
@@ -132,7 +123,7 @@ export default function TruusjeWebsite() {
       cursor.style.left = `${e.clientX}px`;
       cursor.style.top = `${e.clientY}px`;
     };
-    const hoverables = document.querySelectorAll("a,button,.gi,.col-card,.arch-card,.fsize");
+    const hoverables = document.querySelectorAll("a,button,.gi,.col-card,.arch-card,.fsize,.hero-art-card");
     const grow = () => cursor?.classList.add("big");
     const shrink = () => cursor?.classList.remove("big");
     document.addEventListener("mousemove", moveCursor);
@@ -142,8 +133,6 @@ export default function TruusjeWebsite() {
     });
 
     return () => {
-      clearTimeout(timer);
-      window.removeEventListener("resize", drawAll);
       observer.disconnect();
       document.removeEventListener("mousemove", moveCursor);
       hoverables.forEach((el) => {
@@ -176,6 +165,7 @@ export default function TruusjeWebsite() {
         <div className="orbs">
           <div className="orb o1" /><div className="orb o2" /><div className="orb o3" /><div className="orb o4" />
         </div>
+
         <div className="hero-content">
           <p className="eyebrow"><T lang={lang} en="Belgian artist · Venezuelan soul" es="Artista belga · Alma venezolana" /></p>
           <h1 className="hero-title">
@@ -193,6 +183,11 @@ export default function TruusjeWebsite() {
             <button className="btn-outline" onClick={() => scrollToId("contact")}><T lang={lang} en="Acquire a piece" es="Adquirir una obra" /></button>
           </div>
         </div>
+
+        <div className="hero-art-card">
+          <img src="/images/work-xl.jpg" alt="Large blue abstract artwork by Truusje Lemahieu" />
+        </div>
+
         <div className="scroll-hint"><div className="scroll-line" /><span>Scroll</span></div>
       </section>
 
@@ -207,7 +202,6 @@ export default function TruusjeWebsite() {
               ["large", lang === "en" ? "Large" : "Grande"],
               ["medium", lang === "en" ? "Medium" : "Mediano"],
               ["mini", "Mini"],
-              ["cacao", "Cacao"],
             ].map(([value, label]) => (
               <button key={value} className={`ftab ${filter === value ? "active" : ""}`} onClick={() => setFilter(value)}>{label}</button>
             ))}
@@ -215,8 +209,8 @@ export default function TruusjeWebsite() {
 
           <div className="gallery-grid">
             {visibleWorks.map((work) => (
-              <article key={work.id} className={`gi ${work.span}`} data-cat={work.cat}>
-                <canvas id={work.id} />
+              <article key={work.image} className={`gi ${work.span}`} data-cat={work.cat}>
+                <img src={work.image} alt={lang === "en" ? work.nameEn : work.nameEs} />
                 <div className="gi-info">
                   <div className="gi-name">{lang === "en" ? work.nameEn : work.nameEs}</div>
                   <div className="gi-meta">{work.meta}</div>
@@ -229,8 +223,8 @@ export default function TruusjeWebsite() {
           <p className="gallery-note">
             <T
               lang={lang}
-              en={<>All works available as originals or commission. <button onClick={() => scrollToId("contact")}>Enquire →</button></>}
-              es={<>Todas las obras disponibles como originales o por encargo. <button onClick={() => scrollToId("contact")}>Consultar →</button></>}
+              en={<>All works available as originals or commission inspired by an existing piece. <button onClick={() => scrollToId("contact")}>Enquire →</button></>}
+              es={<>Todas las obras disponibles como originales o por encargo inspirado en una pieza existente. <button onClick={() => scrollToId("contact")}>Consultar →</button></>}
             />
           </p>
         </div>
@@ -240,46 +234,39 @@ export default function TruusjeWebsite() {
         <div className="fsize">
           <h3>Mini</h3>
           <div className="fsize-dim">30 × 30 cm</div>
-          <p><T lang={lang} en="Sold as sets of 5 — conceived as a single composition to hang together." es="Se venden en sets de 5 — concebidas como una sola composición para colgar juntas." /></p>
-          <div className="fsize-price"><T lang={lang} en="Sets from €1,200" es="Sets desde €1,200" /></div>
+          <p><T lang={lang} en="Small-format originals, often sold as sets and designed to work as a composition." es="Originales de pequeño formato, usualmente vendidos como sets y pensados como composición." /></p>
+          <div className="fsize-price"><T lang={lang} en="Sets and individual pieces" es="Sets y piezas individuales" /></div>
         </div>
         <div className="fsize">
           <h3><T lang={lang} en="Medium" es="Mediano" /></h3>
-          <div className="fsize-dim">50–70 cm</div>
-          <p><T lang={lang} en="Versatile originals for residential and boutique spaces." es="Originales versátiles para espacios residenciales y boutique." /></p>
-          <div className="fsize-price"><T lang={lang} en="From €800" es="Desde €800" /></div>
+          <div className="fsize-dim">50–80 cm</div>
+          <p><T lang={lang} en="Versatile originals for residential, boutique and intimate spaces." es="Originales versátiles para espacios residenciales, boutique e íntimos." /></p>
+          <div className="fsize-price"><T lang={lang} en="Ready or commissioned" es="Listos o por encargo" /></div>
         </div>
         <div className="fsize">
           <h3><T lang={lang} en="Large" es="Grande" /></h3>
-          <div className="fsize-dim">80–130 cm</div>
-          <p><T lang={lang} en="Statement pieces for collectors and hospitality projects." es="Piezas de impacto para coleccionistas y proyectos de hospitalidad." /></p>
-          <div className="fsize-price"><T lang={lang} en="From €1,600" es="Desde €1,600" /></div>
+          <div className="fsize-dim">90–140 cm</div>
+          <p><T lang={lang} en="Statement pieces for collectors, living spaces and hospitality projects." es="Piezas de impacto para coleccionistas, salas y proyectos de hospitalidad." /></p>
+          <div className="fsize-price"><T lang={lang} en="Original or bespoke" es="Original o a medida" /></div>
         </div>
         <div className="fsize">
           <h3>XL</h3>
           <div className="fsize-dim">150 cm+</div>
-          <p><T lang={lang} en="Grand-format commissions for hotels, lobbies and corporate spaces. Custom sizing." es="Encargos de gran formato para hoteles, lobbies y espacios corporativos. Tamaño a medida." /></p>
-          <div className="fsize-price"><T lang={lang} en="From €4,000 — by commission" es="Desde €4,000 — por encargo" /></div>
+          <p><T lang={lang} en="Grand-format works for hotels, lobbies, corporate spaces and dramatic interiors." es="Obras de gran formato para hoteles, lobbies, espacios corporativos e interiores protagónicos." /></p>
+          <div className="fsize-price"><T lang={lang} en="By commission" es="Por encargo" /></div>
         </div>
       </section>
 
       <section id="about" className="about">
         <div className="about-vis">
-          <div className="about-vis-art">
-            <svg viewBox="0 0 600 800" width="100%" height="100%" preserveAspectRatio="xMidYMid slice">
-              <ellipse cx="150" cy="200" rx="280" ry="200" fill="#E8553A" opacity=".5" />
-              <ellipse cx="420" cy="520" rx="220" ry="250" fill="#1D8C75" opacity=".5" />
-              <path d="M0,600 Q200,300 500,450" stroke="#C8922A" strokeWidth="80" fill="none" strokeLinecap="round" opacity=".3" />
-              <ellipse cx="300" cy="380" rx="130" ry="130" fill="#C2185B" opacity=".25" />
-            </svg>
-          </div>
-          <div className="about-accent-bar" />
-          <div className="about-photo-area">
-            <div className="photo-main"><PhotoPlaceholder label={lang === "en" ? "Portrait of Truusje" : "Retrato de Truusje"} /></div>
+          <div className="about-photo-area real">
+            <div className="photo-main">
+              <img src="/images/truusje-portrait.jpg" alt="Truusje Lemahieu painting a large artwork" />
+            </div>
             <div className="photo-strip">
-              <div className="photo-slot"><PhotoPlaceholder label={lang === "en" ? "Exhibition" : "Exposición"} small /></div>
-              <div className="photo-slot"><PhotoPlaceholder label={lang === "en" ? "Press" : "Prensa"} small /></div>
-              <div className="photo-slot"><PhotoPlaceholder label={lang === "en" ? "Studio" : "Estudio"} small /></div>
+              <div className="photo-slot"><img src="/images/archive-press.jpg" alt="Press archive" /></div>
+              <div className="photo-slot"><img src="/images/archive-studio.jpg" alt="Studio archive" /></div>
+              <div className="photo-slot"><img src="/images/large-corner.jpg" alt="Artwork in interior" /></div>
             </div>
           </div>
         </div>
@@ -296,7 +283,7 @@ export default function TruusjeWebsite() {
             <T lang={lang} en="I left Belgium with a European eye. Venezuela gave me colour I didn’t know existed." es="Salí de Bélgica con un ojo europeo. Venezuela me dio colores que no sabía que existían." />
           </blockquote>
           <p className="about-bio">
-            <T lang={lang} en="Her work has been shown across Belgium, Venezuela, Germany, the Netherlands, Russia and the USA — from Galería Hollywood in Caracas to the Karl Ernst Osthaus Museum in Hagen and the International Art Fair in Miami. Today, based again in Belgium, she paints daily — carrying both worlds in every brushstroke." es="Su obra ha sido expuesta en Bélgica, Venezuela, Alemania, Países Bajos, Rusia y Estados Unidos — desde la Galería Hollywood en Caracas hasta el Museo Karl Ernst Osthaus en Hagen y la Feria de Arte de Miami. Hoy, de nuevo en Bélgica, pinta a diario — llevando ambos mundos en cada pincelada." />
+            <T lang={lang} en="Her work carries a dialogue between European structure and tropical intensity: gesture, rhythm, colour and instinct. Today, based again in Belgium, she paints daily — carrying both worlds in every brushstroke." es="Su obra sostiene un diálogo entre estructura europea e intensidad tropical: gesto, ritmo, color e instinto. Hoy, de nuevo en Bélgica, pinta a diario — llevando ambos mundos en cada pincelada." />
           </p>
           <div className="about-stats">
             <Stat n="40+" en="Years creating" es="Años creando" lang={lang} />
@@ -310,13 +297,16 @@ export default function TruusjeWebsite() {
       <section id="archive" className="archive fu">
         <div className="sec-label"><T lang={lang} en="Selected history" es="Historia seleccionada" /></div>
         <h2 className="sec-title"><T lang={lang} en="Archive" es="Archivo" /></h2>
-        <div className="archive-grid">
+        <div className="archive-grid with-images">
           {archiveItems.map((item) => (
-            <article className="arch-card" key={`${item.year}-${item.venue}`}>
-              <div className="arch-year">{item.year}</div>
-              <h3>{item.venue}</h3>
-              <p>{item.loc}</p>
-              <span>{lang === "en" ? item.typeEn : item.typeEs}</span>
+            <article className="arch-card image-card" key={`${item.year}-${item.venue}`}>
+              <img src={item.image} alt={item.venue} />
+              <div className="arch-card-body">
+                <div className="arch-year">{item.year}</div>
+                <h3>{item.venue}</h3>
+                <p>{item.loc}</p>
+                <span>{lang === "en" ? item.typeEn : item.typeEs}</span>
+              </div>
             </article>
           ))}
         </div>
@@ -328,20 +318,20 @@ export default function TruusjeWebsite() {
           <h2 className="sec-title"><T lang={lang} en="Collections" es="Colecciones" /></h2>
           <div className="col-grid">
             <CollectionCard name="Cacao" swatch="linear-gradient(90deg,#5C3A1E,#C8922A)" lang={lang}
-              en="Abstract paintings inspired by Venezuela’s world-renowned cacao — its deep browns, warm golds, and the land that grows it."
-              es="Pinturas abstractas inspiradas en el cacao venezolano — sus marrones profundos, dorados cálidos y la tierra que lo cultiva."
-              piecesEn="9–12 pieces · Available & commission" piecesEs="9–12 piezas · Disponibles y por encargo" />
-            <CollectionCard name={lang === "en" ? "Deep Currents" : "Corrientes"} swatch="linear-gradient(90deg,#1A2B4A,#1D8C75)" lang={lang}
+              en="A future collection inspired by Venezuelan cacao — its deep browns, warm golds, and the land that grows it."
+              es="Una futura colección inspirada en el cacao venezolano — sus marrones profundos, dorados cálidos y la tierra que lo cultiva."
+              piecesEn="Coming collection · Commission interest open" piecesEs="Próxima colección · Interés por encargo abierto" />
+            <CollectionCard name={lang === "en" ? "Currents" : "Corrientes"} swatch="linear-gradient(90deg,#1A2B4A,#1D8C75)" lang={lang}
               en="Large-format compositions of swirling movement — the rhythm of Caribbean waters, heat, and light translated into abstraction."
               es="Composiciones de gran formato con movimiento envolvente — el ritmo de las aguas caribeñas traducido en abstracción."
-              piecesEn="Large & XL formats · Available" piecesEs="Formatos Grande y XL · Disponibles" />
+              piecesEn="Large & XL formats" piecesEs="Formatos Grande y XL" />
             <CollectionCard name={lang === "en" ? "Origin" : "Origen"} swatch="linear-gradient(90deg,#C2185B,#E8553A,#F4A200)" lang={lang}
-              en="Sets of 5 mini originals conceived as a single composition — bold colour, pure energy. Ideal for gifting and residential spaces."
-              es="Sets de 5 originales mini concebidos como una sola composición — color puro, energía pura. Ideal para regalo y espacios residenciales."
-              piecesEn="Sets of 5 · 30 × 30 cm each" piecesEs="Sets de 5 · 30 × 30 cm cada una" />
+              en="Mini originals and set compositions — bold colour, pure energy, designed for intimate interiors."
+              es="Originales mini y composiciones en set — color puro, energía pura, pensadas para interiores íntimos."
+              piecesEn="Mini and medium formats" piecesEs="Formatos mini y medianos" />
           </div>
           <p className="collection-note">
-            <T lang={lang} en={<>All collections available as ready-made originals or bespoke commissions inspired by existing works. <span>Shop coming soon</span></>} es={<>Todas las colecciones disponibles como originales o encargos inspirados en obras existentes. <span>Tienda próximamente</span></>} />
+            <T lang={lang} en={<>All collections can evolve into ready-made originals or bespoke commissions inspired by existing works. <span>Shop coming soon</span></>} es={<>Todas las colecciones pueden evolucionar en originales disponibles o encargos inspirados en obras existentes. <span>Tienda próximamente</span></>} />
           </p>
         </div>
       </section>
@@ -351,7 +341,7 @@ export default function TruusjeWebsite() {
           <h2><T lang={lang} en={<>Acquire<br />a <em>work.</em></>} es={<>Adquirir<br />una <em>obra.</em></>} /></h2>
           <div className="contact-detail">
             <ContactDetail label={lang === "en" ? "Studio" : "Estudio"} value={lang === "en" ? "Belgium — worldwide shipping" : "Bélgica — envíos a todo el mundo"} />
-            <ContactDetail label={lang === "en" ? "Commissions" : "Encargos"} value={lang === "en" ? "Custom series, hotels, corporate spaces" : "Series personalizadas, hoteles, espacios corporativos"} />
+            <ContactDetail label={lang === "en" ? "Commissions" : "Encargos"} value={lang === "en" ? "Original works, custom sizes, interior projects" : "Obras originales, tamaños a medida, proyectos de interiorismo"} />
             <ContactDetail label="Instagram" value="@truusje.art" gold />
             <ContactDetail label={lang === "en" ? "Also available on" : "También disponible en"} value="Saatchi Art" gold />
           </div>
@@ -365,8 +355,8 @@ export default function TruusjeWebsite() {
             <select defaultValue="">
               <option value="" disabled>—</option>
               <option>{lang === "en" ? "Purchasing an original" : "Adquirir un original"}</option>
-              <option>{lang === "en" ? "Commissioning a series" : "Encargar una serie"}</option>
-              <option>{lang === "en" ? "Hotel / hospitality project" : "Proyecto hotelero"}</option>
+              <option>{lang === "en" ? "Commissioning a work inspired by an existing piece" : "Encargar una obra inspirada en una pieza existente"}</option>
+              <option>{lang === "en" ? "Interior design / hospitality project" : "Proyecto de interiorismo u hotelería"}</option>
               <option>{lang === "en" ? "Press or collaboration" : "Prensa o colaboración"}</option>
             </select>
           </div>
@@ -384,19 +374,6 @@ export default function TruusjeWebsite() {
         <div className="f-links"><button>Instagram</button><button>Saatchi Art</button></div>
       </footer>
     </main>
-  );
-}
-
-function PhotoPlaceholder({ label, small }) {
-  return (
-    <div className="photo-placeholder">
-      <svg width={small ? 24 : 48} height={small ? 24 : 48} fill="none" stroke="white" strokeWidth="1.5" viewBox="0 0 24 24">
-        <rect x="3" y="3" width="18" height="18" rx="2" />
-        <circle cx="8.5" cy="8.5" r="1.5" />
-        <path d="M21 15l-5-5L5 21" />
-      </svg>
-      <span>{label}</span>
-    </div>
   );
 }
 
