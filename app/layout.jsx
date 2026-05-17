@@ -1,8 +1,8 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "T. Lemahieu | Abstract Fine Art",
-  description: "Unique original works, painted objects and commissions by Belgian artist T. Lemahieu.",
+  title: "T. Lemahieu — Belgian Abstract Artist | Original Works & Commissions",
+  description: "Original abstract works, painted objects and selected commissions by Belgian artist T. Lemahieu.",
 };
 
 export default function RootLayout({ children }) {
