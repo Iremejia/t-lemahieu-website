@@ -2,7 +2,7 @@ import "./globals.css";
 
 export const metadata = {
   title: "T. Lemahieu | Abstract Fine Art",
-  description: "Portfolio website for Belgian abstract artist T. Lemahieu.",
+  description: "Unique original works, painted objects and commissions by Belgian artist T. Lemahieu.",
 };
 
 export default function RootLayout({ children }) {
