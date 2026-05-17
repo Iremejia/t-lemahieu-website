@@ -5,7 +5,7 @@ import React, { useMemo, useState } from "react";
 const DATA = [
   {
     "code": "PA-124",
-    "title": "Chromatic Balance",
+    "title": "Untitled",
     "collection": "Pure Abstraction",
     "dimensions": "86 x 196 cm",
     "units": "1 piece",
@@ -13,11 +13,11 @@ const DATA = [
     "technique": "Acrylic on canvas",
     "format": "Statement Work",
     "status": "Available",
-    "image": "/images/available-pa-124.jpg"
+    "image": "/images/uploaded/1.png"
   },
   {
     "code": "RIT-056",
-    "title": "Object of Pause",
+    "title": "Untitled",
     "collection": "Rituals",
     "dimensions": "70 x 80 cm",
     "units": "1 piece",
@@ -25,11 +25,11 @@ const DATA = [
     "technique": "Acrylic on canvas",
     "format": "Signature Work",
     "status": "Available",
-    "image": "/images/available-rit-056.jpg"
+    "image": "/images/uploaded/2.png"
   },
   {
     "code": "CAR-087",
-    "title": "Blue Current",
+    "title": "Untitled",
     "collection": "Cardúmenes",
     "dimensions": "80 x 200 cm",
     "units": "1 piece",
@@ -37,11 +37,11 @@ const DATA = [
     "technique": "Acrylic on canvas",
     "format": "Statement Work",
     "status": "Available",
-    "image": "/images/available-car-087.jpg"
+    "image": "/images/uploaded/3.png"
   },
   {
     "code": "PA-139",
-    "title": "Color Architecture",
+    "title": "Untitled",
     "collection": "Pure Abstraction",
     "dimensions": "100 x 240 cm",
     "units": "1 piece",
@@ -49,11 +49,11 @@ const DATA = [
     "technique": "Acrylic on canvas",
     "format": "Monumental Work",
     "status": "Available",
-    "image": "/images/available-pa-139.jpg"
+    "image": "/images/uploaded/4.png"
   },
   {
     "code": "CAR-092",
-    "title": "Living Tide",
+    "title": "Untitled",
     "collection": "Cardúmenes",
     "dimensions": "100 x 240 cm",
     "units": "1 piece",
@@ -61,11 +61,11 @@ const DATA = [
     "technique": "Acrylic on canvas",
     "format": "Monumental Work",
     "status": "Available",
-    "image": "/images/available-car-092.jpg"
+    "image": "/images/uploaded/5.png"
   },
   {
     "code": "RIT-061",
-    "title": "Ceremonial Table",
+    "title": "Untitled",
     "collection": "Rituals",
     "dimensions": "156 x 136 cm",
     "units": "1 piece",
@@ -73,11 +73,11 @@ const DATA = [
     "technique": "Acrylic on canvas",
     "format": "Statement Work",
     "status": "Available",
-    "image": "/images/available-rit-061.jpg"
+    "image": "/images/uploaded/6.png"
   },
   {
     "code": "PA-147",
-    "title": "Vertical Balance",
+    "title": "Untitled",
     "collection": "Pure Abstraction",
     "dimensions": "160 x 80 cm",
     "units": "1 piece",
@@ -85,11 +85,11 @@ const DATA = [
     "technique": "Acrylic on canvas",
     "format": "Statement Work",
     "status": "Available",
-    "image": "/images/available-pa-147.jpg"
+    "image": "/images/uploaded/7.png"
   },
   {
     "code": "CAR-104",
-    "title": "Collective Motion",
+    "title": "Untitled",
     "collection": "Cardúmenes",
     "dimensions": "140 x 225 cm",
     "units": "1 piece",
@@ -97,11 +97,11 @@ const DATA = [
     "technique": "Acrylic on canvas",
     "format": "Monumental Work",
     "status": "Available",
-    "image": "/images/available-car-104.jpg"
+    "image": "/images/uploaded/8.png"
   },
   {
     "code": "RIT-073",
-    "title": "The Gathering",
+    "title": "Untitled",
     "collection": "Rituals",
     "dimensions": "77 x 100 cm",
     "units": "1 piece",
@@ -109,11 +109,11 @@ const DATA = [
     "technique": "Acrylic on canvas",
     "format": "Signature Work",
     "status": "Available",
-    "image": "/images/available-rit-073.jpg"
+    "image": "/images/uploaded/9.png"
   },
   {
     "code": "RIT-079",
-    "title": "The Red Vessel",
+    "title": "Untitled",
     "collection": "Rituals",
     "dimensions": "140 x 190 cm",
     "units": "1 piece",
@@ -121,7 +121,7 @@ const DATA = [
     "technique": "Acrylic on canvas",
     "format": "Monumental Work",
     "status": "Available",
-    "image": "/images/available-rit-079.jpg"
+    "image": "/images/uploaded/10.png"
   },
   {
     "code": "OBJ-060",
@@ -130,14 +130,14 @@ const DATA = [
     "dimensions": "—",
     "units": "1 piece",
     "price": "$3,200 USD",
-    "technique": "Acrylic on textile",
+    "technique": "Acrílico sobre tela ",
     "format": "Painted Object",
     "status": "Available",
-    "image": "/images/obj-060-the-rewritten-chair.jpg"
+    "image": "/images/uploaded/silla.png"
   },
   {
     "code": "RIT-084",
-    "title": "Ritual Sequence",
+    "title": "Untitled",
     "collection": "Rituals",
     "dimensions": "32 x 24 cm",
     "units": "Set of 3 pieces",
@@ -149,7 +149,7 @@ const DATA = [
   },
   {
     "code": "CAR-118",
-    "title": "Architectural Current",
+    "title": "Untitled",
     "collection": "Cardúmenes",
     "dimensions": "—",
     "units": "1 piece",
@@ -161,7 +161,7 @@ const DATA = [
   },
   {
     "code": "PA-152",
-    "title": "Open Rhythm",
+    "title": "Untitled",
     "collection": "Pure Abstraction",
     "dimensions": "—",
     "units": "1 piece",
@@ -173,7 +173,7 @@ const DATA = [
   },
   {
     "code": "PA-166",
-    "title": "Collected Balance",
+    "title": "Untitled",
     "collection": "Pure Abstraction",
     "dimensions": "31 x 21 cm",
     "units": "Set of 10 pieces",
@@ -181,11 +181,11 @@ const DATA = [
     "technique": "Acrylic on wood",
     "format": "Intimate Work",
     "status": "Commission reference",
-    "image": "/images/set-composition-10.jpg"
+    "image": "/images/uploaded/set-10-composicion.png"
   },
   {
     "code": "PA-171",
-    "title": "Three Forms",
+    "title": "Untitled",
     "collection": "Pure Abstraction",
     "dimensions": "28 x 28 cm",
     "units": "Set of 3 pieces",
@@ -197,7 +197,7 @@ const DATA = [
   },
   {
     "code": "PA-184",
-    "title": "Two Gestures",
+    "title": "Untitled",
     "collection": "Pure Abstraction",
     "dimensions": "32 x 24 cm",
     "units": "Set of 2 pieces",
@@ -209,7 +209,7 @@ const DATA = [
   },
   {
     "code": "RIT-091",
-    "title": "Domestic Pair",
+    "title": "Untitled",
     "collection": "Rituals",
     "dimensions": "—",
     "units": "Set of 2 pieces",
@@ -221,7 +221,7 @@ const DATA = [
   },
   {
     "code": "CAR-126",
-    "title": "Blue Gathering",
+    "title": "Untitled",
     "collection": "Cardúmenes",
     "dimensions": "60 x 40 cm",
     "units": "1 piece",
@@ -233,7 +233,7 @@ const DATA = [
   },
   {
     "code": "PA-193",
-    "title": "Green Threshold",
+    "title": "Untitled",
     "collection": "Pure Abstraction",
     "dimensions": "—",
     "units": "1 piece",
@@ -245,7 +245,7 @@ const DATA = [
   },
   {
     "code": "CAR-132",
-    "title": "A Field in Motion",
+    "title": "Untitled",
     "collection": "Cardúmenes",
     "dimensions": "—",
     "units": "1 piece",
@@ -257,7 +257,7 @@ const DATA = [
   },
   {
     "code": "PA-201",
-    "title": "Tropical Structure",
+    "title": "Untitled",
     "collection": "Pure Abstraction",
     "dimensions": "—",
     "units": "1 piece",
@@ -269,7 +269,7 @@ const DATA = [
   },
   {
     "code": "PA-214",
-    "title": "Small Color Wall",
+    "title": "Untitled",
     "collection": "Pure Abstraction",
     "dimensions": "28 x 28 cm",
     "units": "Set of 5 pieces",
@@ -277,11 +277,11 @@ const DATA = [
     "technique": "Acrylic on canvas",
     "format": "Intimate Work",
     "status": "Commission reference",
-    "image": "/images/set-5.jpg"
+    "image": "/images/uploaded/set-5.png"
   },
   {
     "code": "RIT-103",
-    "title": "Cup, Bowl, Gesture",
+    "title": "Untitled",
     "collection": "Rituals",
     "dimensions": "22 x 22 cm",
     "units": "Set of 2 pieces",
@@ -293,7 +293,7 @@ const DATA = [
   },
   {
     "code": "PA-227",
-    "title": "Paper Gesture",
+    "title": "Untitled",
     "collection": "Pure Abstraction",
     "dimensions": "32 x 24 cm",
     "units": "Set of 2 pieces",
@@ -305,7 +305,7 @@ const DATA = [
   },
   {
     "code": "RIT-117",
-    "title": "Quiet Object",
+    "title": "Untitled",
     "collection": "Rituals",
     "dimensions": "32 x 24 cm",
     "units": "1 piece",
@@ -317,7 +317,7 @@ const DATA = [
   },
   {
     "code": "RIT-124",
-    "title": "Ritual Sequence",
+    "title": "Untitled",
     "collection": "Rituals",
     "dimensions": "32 x 24 cm",
     "units": "Set of 4 pieces",
@@ -329,7 +329,7 @@ const DATA = [
   },
   {
     "code": "RIT-138",
-    "title": "Ritual Pair",
+    "title": "Untitled",
     "collection": "Rituals",
     "dimensions": "32 x 24 cm",
     "units": "Set of 2 pieces",
@@ -341,7 +341,7 @@ const DATA = [
   },
   {
     "code": "CAR-141",
-    "title": "Current Pair I",
+    "title": "Untitled",
     "collection": "Cardúmenes",
     "dimensions": "32 x 24 cm",
     "units": "Set of 2 pieces",
@@ -353,7 +353,7 @@ const DATA = [
   },
   {
     "code": "CAR-154",
-    "title": "Current Pair II",
+    "title": "Untitled",
     "collection": "Cardúmenes",
     "dimensions": "32 x 24 cm",
     "units": "Set of 2 pieces",
@@ -365,7 +365,7 @@ const DATA = [
   },
   {
     "code": "CAR-169",
-    "title": "Three Currents",
+    "title": "Untitled",
     "collection": "Cardúmenes",
     "dimensions": "32 x 24 cm",
     "units": "Set of 3 pieces",
@@ -377,7 +377,7 @@ const DATA = [
   },
   {
     "code": "RIT-146",
-    "title": "Ritual Trio",
+    "title": "Untitled",
     "collection": "Rituals",
     "dimensions": "32 x 24 cm",
     "units": "Set of 3 pieces",
@@ -389,7 +389,7 @@ const DATA = [
   },
   {
     "code": "CF-041",
-    "title": "Fragments in Dialogue",
+    "title": "Untitled",
     "collection": "Collected Fragments",
     "dimensions": "20 x 20 cm",
     "units": "Set of 2 pieces",
@@ -401,7 +401,7 @@ const DATA = [
   },
   {
     "code": "CF-064",
-    "title": "Layered Fragment I",
+    "title": "Untitled",
     "collection": "Collected Fragments",
     "dimensions": "20 x 20 cm",
     "units": "1 piece",
@@ -413,7 +413,7 @@ const DATA = [
   },
   {
     "code": "CF-078",
-    "title": "Layered Fragment II",
+    "title": "Untitled",
     "collection": "Collected Fragments",
     "dimensions": "20 x 20 cm",
     "units": "1 piece",
@@ -425,7 +425,7 @@ const DATA = [
   },
   {
     "code": "CF-083",
-    "title": "Layered Fragment III",
+    "title": "Untitled",
     "collection": "Collected Fragments",
     "dimensions": "20 x 20 cm",
     "units": "1 piece",
@@ -437,7 +437,7 @@ const DATA = [
   },
   {
     "code": "CF-097",
-    "title": "Layered Fragment IV",
+    "title": "Untitled",
     "collection": "Collected Fragments",
     "dimensions": "20 x 20 cm",
     "units": "1 piece",
@@ -449,7 +449,7 @@ const DATA = [
   },
   {
     "code": "CF-105",
-    "title": "Layered Fragment V",
+    "title": "Untitled",
     "collection": "Collected Fragments",
     "dimensions": "20 x 20 cm",
     "units": "1 piece",
@@ -461,7 +461,7 @@ const DATA = [
   },
   {
     "code": "CF-116",
-    "title": "Layered Fragment VI",
+    "title": "Untitled",
     "collection": "Collected Fragments",
     "dimensions": "20 x 20 cm",
     "units": "1 piece",
@@ -473,7 +473,7 @@ const DATA = [
   },
   {
     "code": "CF-128",
-    "title": "Cut Surface Pair",
+    "title": "Untitled",
     "collection": "Collected Fragments",
     "dimensions": "22 x 16 cm",
     "units": "Set of 2 pieces",
@@ -485,7 +485,7 @@ const DATA = [
   },
   {
     "code": "CF-196",
-    "title": "Grey Shoals",
+    "title": "Untitled",
     "collection": "Collected Fragments",
     "dimensions": "22 x 16 cm",
     "units": "Set of 2 pieces",
@@ -497,7 +497,7 @@ const DATA = [
   },
   {
     "code": "CF-152",
-    "title": "Tiny Fragments",
+    "title": "Untitled",
     "collection": "Collected Fragments",
     "dimensions": "10 x 10 cm",
     "units": "Set of 2 pieces",
@@ -518,6 +518,18 @@ const DATA = [
     "format": "Painted Object",
     "status": "Commission reference",
     "image": "/images/object-indoor-mountain.jpg"
+  },
+  {
+    "code": "RIT-117",
+    "title": "Untitled",
+    "collection": "Rituals",
+    "dimensions": "32 x 24 cm",
+    "units": "Set of 2 pieces",
+    "price": "$700 USD",
+    "technique": "Mixed media on paper",
+    "format": "Intimate Work",
+    "status": "Available",
+    "image": "/images/intimate-rit-117.jpg"
   }
 ];
 
@@ -525,10 +537,10 @@ const collectionOrder = ["Cardúmenes", "Rituals", "Pure Abstraction", "Collecte
 const formatOrder = ["Intimate Work", "Signature Work", "Statement Work", "Monumental Work", "Painted Object"];
 
 const heroSlides = [
-  "/images/legacy-obra-xl.jpg",
-  "/images/available-car-092.jpg",
-  "/images/legacy-grande-premium.jpg",
-  "/images/archive-studio-original.jpg"
+  "/images/uploaded/obra-xl.png",
+  "/images/uploaded/5.png",
+  "/images/uploaded/grande-foto-premium.png",
+  "/images/uploaded/archivo-studio.png"
 ];
 
 const archiveImages = [
@@ -536,6 +548,213 @@ const archiveImages = [
   { src: "/images/archive-studio-original.jpg", title: "Studio process", text: "Large-scale works in progress, where rhythm and color are built stroke by stroke." },
   { src: "/images/legacy-grande.jpg", title: "Installed work", text: "A work placed within an interior, revealing scale and presence." },
   { src: "/images/legacy-mediano-2.jpg", title: "Interior placement", text: "Medium-format works within refined spaces." }
+];
+
+const visualArchiveImages = [
+  {
+    "src": "/images/uploaded/1.png",
+    "title": "1 "
+  },
+  {
+    "src": "/images/uploaded/10.png",
+    "title": "10 "
+  },
+  {
+    "src": "/images/uploaded/2.png",
+    "title": "2 "
+  },
+  {
+    "src": "/images/uploaded/3.png",
+    "title": "3 "
+  },
+  {
+    "src": "/images/uploaded/4.png",
+    "title": "4"
+  },
+  {
+    "src": "/images/uploaded/5.png",
+    "title": "5"
+  },
+  {
+    "src": "/images/uploaded/6.png",
+    "title": "6"
+  },
+  {
+    "src": "/images/uploaded/7.png",
+    "title": "7 "
+  },
+  {
+    "src": "/images/uploaded/8.png",
+    "title": "8"
+  },
+  {
+    "src": "/images/uploaded/9.png",
+    "title": "9 "
+  },
+  {
+    "src": "/images/uploaded/archivo-studio.png",
+    "title": "Archivo Studio"
+  },
+  {
+    "src": "/images/uploaded/archivo.png",
+    "title": "Archivo"
+  },
+  {
+    "src": "/images/uploaded/chatgpt-image-may-16-2026-04-17-04-pm.png",
+    "title": "ChatGPT Image May 16, 2026, 04_17_04 PM"
+  },
+  {
+    "src": "/images/uploaded/chatgpt-image-may-16-2026-04-39-24-pm.png",
+    "title": "ChatGPT Image May 16, 2026, 04_39_24 PM"
+  },
+  {
+    "src": "/images/uploaded/chatgpt-image-may-16-2026-04-44-45-pm.png",
+    "title": "ChatGPT Image May 16, 2026, 04_44_45 PM"
+  },
+  {
+    "src": "/images/uploaded/chatgpt-image-may-16-2026-04-50-27-pm.png",
+    "title": "ChatGPT Image May 16, 2026, 04_50_27 PM"
+  },
+  {
+    "src": "/images/uploaded/chatgpt-image-may-16-2026-04-52-44-pm.png",
+    "title": "ChatGPT Image May 16, 2026, 04_52_44 PM"
+  },
+  {
+    "src": "/images/uploaded/chatgpt-image-may-16-2026-04-54-26-pm.png",
+    "title": "ChatGPT Image May 16, 2026, 04_54_26 PM"
+  },
+  {
+    "src": "/images/uploaded/chatgpt-image-may-16-2026-04-56-50-pm.png",
+    "title": "ChatGPT Image May 16, 2026, 04_56_50 PM"
+  },
+  {
+    "src": "/images/uploaded/chatgpt-image-may-16-2026-04-58-40-pm.png",
+    "title": "ChatGPT Image May 16, 2026, 04_58_40 PM"
+  },
+  {
+    "src": "/images/uploaded/chatgpt-image-may-16-2026-04-58-50-pm.png",
+    "title": "ChatGPT Image May 16, 2026, 04_58_50 PM"
+  },
+  {
+    "src": "/images/uploaded/chatgpt-image-may-16-2026-05-08-27-pm.png",
+    "title": "ChatGPT Image May 16, 2026, 05_08_27 PM"
+  },
+  {
+    "src": "/images/uploaded/chatgpt-image-may-16-2026-05-08-37-pm.png",
+    "title": "ChatGPT Image May 16, 2026, 05_08_37 PM"
+  },
+  {
+    "src": "/images/uploaded/chatgpt-image-may-16-2026-05-11-16-pm.png",
+    "title": "ChatGPT Image May 16, 2026, 05_11_16 PM"
+  },
+  {
+    "src": "/images/uploaded/chatgpt-image-may-16-2026-05-19-46-pm.png",
+    "title": "ChatGPT Image May 16, 2026, 05_19_46 PM"
+  },
+  {
+    "src": "/images/uploaded/chatgpt-image-may-16-2026-05-20-46-pm.png",
+    "title": "ChatGPT Image May 16, 2026, 05_20_46 PM"
+  },
+  {
+    "src": "/images/uploaded/chatgpt-image-may-16-2026-05-25-04-pm.png",
+    "title": "ChatGPT Image May 16, 2026, 05_25_04 PM"
+  },
+  {
+    "src": "/images/uploaded/chatgpt-image-may-16-2026-05-25-13-pm.png",
+    "title": "ChatGPT Image May 16, 2026, 05_25_13 PM"
+  },
+  {
+    "src": "/images/uploaded/chatgpt-image-may-16-2026-05-33-09-pm-1.png",
+    "title": "ChatGPT Image May 16, 2026, 05_33_09 PM (1)"
+  },
+  {
+    "src": "/images/uploaded/chatgpt-image-may-16-2026-05-33-09-pm-2.png",
+    "title": "ChatGPT Image May 16, 2026, 05_33_09 PM (2)"
+  },
+  {
+    "src": "/images/uploaded/chatgpt-image-may-16-2026-05-33-09-pm-3.png",
+    "title": "ChatGPT Image May 16, 2026, 05_33_09 PM (3)"
+  },
+  {
+    "src": "/images/uploaded/chatgpt-image-may-16-2026-05-33-10-pm-4.png",
+    "title": "ChatGPT Image May 16, 2026, 05_33_10 PM (4)"
+  },
+  {
+    "src": "/images/uploaded/chatgpt-image-may-16-2026-05-33-11-pm-5.png",
+    "title": "ChatGPT Image May 16, 2026, 05_33_11 PM (5)"
+  },
+  {
+    "src": "/images/uploaded/chatgpt-image-may-16-2026-05-33-12-pm-6.png",
+    "title": "ChatGPT Image May 16, 2026, 05_33_12 PM (6)"
+  },
+  {
+    "src": "/images/uploaded/chatgpt-image-may-16-2026-05-37-18-pm.png",
+    "title": "ChatGPT Image May 16, 2026, 05_37_18 PM"
+  },
+  {
+    "src": "/images/uploaded/chatgpt-image-may-16-2026-05-40-20-pm.png",
+    "title": "ChatGPT Image May 16, 2026, 05_40_20 PM"
+  },
+  {
+    "src": "/images/uploaded/chatgpt-image-may-16-2026-05-49-59-pm.png",
+    "title": "ChatGPT Image May 16, 2026, 05_49_59 PM"
+  },
+  {
+    "src": "/images/uploaded/chatgpt-image-may-16-2026-08-22-01-pm.png",
+    "title": "ChatGPT Image May 16, 2026, 08_22_01 PM"
+  },
+  {
+    "src": "/images/uploaded/grande-foto-premium.png",
+    "title": "Grande foto premium"
+  },
+  {
+    "src": "/images/uploaded/grande.png",
+    "title": "Grande"
+  },
+  {
+    "src": "/images/uploaded/mini.png",
+    "title": "MIni"
+  },
+  {
+    "src": "/images/uploaded/mediano-2.png",
+    "title": "Mediano 2"
+  },
+  {
+    "src": "/images/uploaded/mediano.png",
+    "title": "Mediano"
+  },
+  {
+    "src": "/images/uploaded/obra-xl.png",
+    "title": "Obra XL"
+  },
+  {
+    "src": "/images/uploaded/obra-grande.png",
+    "title": "Obra grande"
+  },
+  {
+    "src": "/images/uploaded/set-10-composicion.png",
+    "title": "Set 10 composición"
+  },
+  {
+    "src": "/images/uploaded/set-2-piezas.png",
+    "title": "Set 2 piezas"
+  },
+  {
+    "src": "/images/uploaded/set-3.png",
+    "title": "Set 3"
+  },
+  {
+    "src": "/images/uploaded/set-5.png",
+    "title": "Set 5"
+  },
+  {
+    "src": "/images/uploaded/silla.png",
+    "title": "Silla "
+  },
+  {
+    "src": "/images/uploaded/truusje.png",
+    "title": "Truusje"
+  }
 ];
 
 const copy = {
@@ -852,6 +1071,13 @@ export default function Website() {
                 <p>{item.text}</p>
               </div>
             </article>
+          ))}
+        </div>
+        <div className="visualArchive">
+          {visualArchiveImages.map((item) => (
+            <button key={item.src} onClick={() => setActive({ code: "Archive", title: item.title, collection: "Visual Archive", dimensions: "—", technique: "", units: "", status: "", price: "Private inquiry", format: "Archive Image", image: item.src })}>
+              <img src={item.src} alt={item.title} />
+            </button>
           ))}
         </div>
       </section>
