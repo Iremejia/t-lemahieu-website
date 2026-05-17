@@ -1,278 +1,45 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 
-const availableWorks = [
-  {
-    title: "Available Work 01",
-    format: "Statement",
-    collection: "Rituals",
-    dimensions: "86 × 196 cm",
-    status: "Available",
-    price: "Price upon request",
-    image: "/images/available-01.jpg",
-  },
-  {
-    title: "Available Work 02",
-    format: "Signature",
-    collection: "Rituals",
-    dimensions: "70 × 80 cm",
-    status: "Available",
-    price: "Price upon request",
-    image: "/images/available-02.jpg",
-  },
-  {
-    title: "Available Work 03",
-    format: "Statement",
-    collection: "Cardúmenes",
-    dimensions: "80 × 200 cm",
-    status: "Available",
-    price: "Price upon request",
-    image: "/images/available-03.jpg",
-  },
-  {
-    title: "Available Work 04",
-    format: "Monumental",
-    collection: "Pure Abstraction",
-    dimensions: "100 × 240 cm",
-    status: "Available",
-    price: "Price upon request",
-    image: "/images/available-04.jpg",
-  },
-  {
-    title: "Available Work 05",
-    format: "Monumental",
-    collection: "Cardúmenes",
-    dimensions: "100 × 240 cm",
-    status: "Available",
-    price: "Price upon request",
-    image: "/images/available-05.jpg",
-  },
-  {
-    title: "Available Work 06",
-    format: "Statement",
-    collection: "Rituals",
-    dimensions: "156 × 136 cm",
-    status: "Available",
-    price: "Price upon request",
-    image: "/images/available-06.jpg",
-  },
-  {
-    title: "Available Work 07",
-    format: "Statement",
-    collection: "Rituals",
-    dimensions: "160 × 80 cm",
-    status: "Available",
-    price: "Price upon request",
-    image: "/images/available-07.jpg",
-  },
-  {
-    title: "Available Work 08",
-    format: "Monumental",
-    collection: "Cardúmenes",
-    dimensions: "140 × 225 cm",
-    status: "Available",
-    price: "Price upon request",
-    image: "/images/available-08.jpg",
-  },
-  {
-    title: "Available Work 09",
-    format: "Signature",
-    collection: "Rituals",
-    dimensions: "77 × 100 cm",
-    status: "Available",
-    price: "Price upon request",
-    image: "/images/available-09.jpg",
-  },
-  {
-    title: "Available Work 10",
-    format: "Statement",
-    collection: "Cacao",
-    dimensions: "140 × 190 cm",
-    status: "Available",
-    price: "Price upon request",
-    image: "/images/available-10.jpg",
-  }
-];
-
-const featuredWorks = [
-  {
-    title: "Blue Current",
-    format: "Monumental",
-    collection: "Cardúmenes",
-    dimensions: "Grand format",
-    status: "Commission reference",
-    price: "Price upon request",
-    image: "/images/work-xl.jpg",
-  },
-  {
-    title: "Chromatic Living Room",
-    format: "Statement",
-    collection: "Pure Abstraction",
-    dimensions: "Large format",
-    status: "Commission reference",
-    price: "Price upon request",
-    image: "/images/large-premium-living.jpg",
-  },
-  {
-    title: "Caribbean Pulse",
-    format: "Statement",
-    collection: "Cardúmenes",
-    dimensions: "Large format",
-    status: "Commission reference",
-    price: "Price upon request",
-    image: "/images/work-large-blue.jpg",
-  },
-  {
-    title: "Green Rhythm",
-    format: "Signature",
-    collection: "Pure Abstraction",
-    dimensions: "Medium format",
-    status: "Commission reference",
-    price: "Price upon request",
-    image: "/images/medium-bench.jpg",
-  },
-  {
-    title: "Black & White Set",
-    format: "Intimate",
-    collection: "Collected Fragments",
-    dimensions: "Curated set",
-    status: "Commission reference",
-    price: "Price upon request",
-    image: "/images/set-composition-10.jpg",
-  },
-];
-
-const allWorks = [...availableWorks, ...featuredWorks];
-
-const formats = [
-  {
-    name: "Intimate",
-    subtitle: "Collected small-scale works for personal, layered spaces.",
-    desc: "Small-scale works and curated sets, designed for personal spaces, layered walls, and collectors beginning or expanding a collection.",
-    img: "/images/mini-bedroom.jpg",
-    meta: "Small works · curated sets · close-view pieces",
-    best: "Bedrooms, corridors, intimate walls, gifts, first acquisitions."
-  },
-  {
-    name: "Signature",
-    subtitle: "Medium-format pieces with a distinct visual identity.",
-    desc: "Medium-format pieces with strong visual identity, offering presence and balance within refined interiors.",
-    img: "/images/available-02.jpg",
-    meta: "Medium originals · balanced focal points",
-    best: "Reading corners, entrances, offices, bedrooms, refined interiors."
-  },
-  {
-    name: "Statement",
-    subtitle: "Large-scale works designed to anchor a room.",
-    desc: "Large-scale works designed to anchor a room, create focus, and bring expressive energy into a space.",
-    img: "/images/available-01.jpg",
-    meta: "Large originals · available or commissioned",
-    best: "Living rooms, dining rooms, hospitality spaces, collector walls."
-  },
-  {
-    name: "Monumental",
-    subtitle: "Oversized works with architectural presence.",
-    desc: "Oversized works with architectural presence, conceived as commanding focal points for expansive interiors.",
-    img: "/images/available-05.jpg",
-    meta: "Oversized works · made by commission",
-    best: "Lobbies, hotels, expansive homes, architectural walls."
-  }
-];
-
-const collections = [
-  {
-    name: "Pure Abstraction",
-    short: "Abstraction becomes a language of its own: free, recurring, and unmistakably personal forms emerge through color, light, and depth.",
-    desc: "In Pure Abstraction, abstraction becomes a language of its own. Free, recurring, and unmistakably personal forms emerge through color, light, and depth, creating compositions that do not need to represent in order to hold presence. Each work exists through its own visual force. The eye enters a territory of gestures, planes, and forms that belong to the most essential universe of T. Lemahieu. Beneath the apparent freedom of the composition lies a precise balance, where every brushstroke is placed with intention.",
-    colors: ["#1A2B4A","#1D8C75","#E8553A","#C8922A"],
-    imgs: ["/images/available-04.jpg","/images/large-premium-living.jpg"],
-    cta: "Ask about Pure Abstraction"
-  },
-  {
-    name: "Cardúmenes",
-    short: "A study of movement as collective force: direction, synchronicity, abundance, and rhythm moving through the composition.",
-    desc: "More than a representation of the sea, Cardúmenes explores movement as a collective force. Direction, synchronicity, abundance, and rhythm move through the composition, creating a sense of life in motion. Brushstrokes gather like living particles, shaping surfaces that seem to open inward. The eye moves through layers of color and light, as if entering a current. Each work offers an immersion, a space in flow where new planes, new depths, and a constant vibration of life begin to appear.",
-    colors: ["#0D1B2E","#1A3461","#1D8C75","#2BA88A"],
-    imgs: ["/images/available-05.jpg","/images/available-08.jpg"],
-    cta: "Ask about Cardúmenes"
-  },
-  {
-    name: "Rituals",
-    short: "Objects detach from everyday function and take on a ceremonial presence between the recognizable and the abstract.",
-    desc: "In Rituals, objects detach from their everyday function and take on a ceremonial presence. The artist shifts perspective, crosses planes, and brings different points of view into a single composition. Forms flatten, expand, overlap, and become sculptural. Between the recognizable and the abstract, color intensifies the emotion of each element, light builds atmosphere, and depth emerges from the tension between surface and space. The everyday ceases to be ordinary and becomes pause, gathering, presence, and ceremony.",
-    colors: ["#C2185B","#E8553A","#C8922A","#5C3A1E"],
-    imgs: ["/images/available-06.jpg","/images/available-09.jpg"],
-    cta: "Ask about Rituals"
-  },
-  {
-    name: "Cacao",
-    short: "An exploration of origin, connection, and the sensitive memory of the Caribbean.",
-    desc: "Cacao begins as an exploration of origin, connection, and the sensitive memory of the Caribbean. It is a collection shaped by warmth, familiarity, and the emotional force of the tropical. It does not approach the Caribbean as a literal image, but as an intimate presence: an atmosphere of color, light, closeness, and belonging. In these works, cacao becomes a meeting point between memory, affection, and territory.",
-    colors: ["#5C3A1E","#8B5A2B","#C8922A","#E8553A"],
-    imgs: ["/images/available-10.jpg","/images/set-3.jpg"],
-    cta: "Request a Cacao commission"
-  },
-  {
-    name: "Collected Fragments",
-    short: "Small-format works built through intuition, cutting, layering, archive, fragment, and recomposition.",
-    desc: "Collected Fragments brings together small-format works built through intuition, cutting, and layering. They are intimate and tactile pieces, close to the gesture of archive, fragment, and recomposition. Depth appears through the relationship between layers of paper, color, texture, cuts, encounters, accidents, and intuitive decisions. Through their scale, each piece invites a closer, more private gaze, a quieter and more detailed entrance into the artist’s universe.",
-    colors: ["#1C1C1C","#FAF7F2","#C2185B","#C8922A"],
-    imgs: ["/images/set-composition-10.jpg","/images/mini-bedroom.jpg"],
-    cta: "Ask about Collected Fragments"
-  }
-];
-
-const archive = [
-  ["99","Metro feature","Belgium · Press archive","Press","/images/archive-press.jpg"],
-  ["Studio","Large-scale work in progress","Artist studio","Process","/images/archive-studio.jpg"],
-  ["Now","Artist at work","Detail and signature","Studio","/images/truusje-portrait.jpg"]
-];
+const works = [{"code": "PA-124", "title": "Chromatic Balance", "collection": "Pure Abstraction", "dimensions": "86 x 196 cm", "technique": "Acrylic on canvas", "format": "Statement Work", "price": "$4,300", "status": "Available", "image": "/images/available-pa-124.jpg"}, {"code": "RIT-056", "title": "Object of Pause", "collection": "Rituals", "dimensions": "70 x 80 cm", "technique": "Acrylic on canvas", "format": "Signature Work", "price": "$2,000", "status": "Available", "image": "/images/available-rit-056.jpg"}, {"code": "CAR-087", "title": "Blue Current", "collection": "Cardúmenes", "dimensions": "80 x 200 cm", "technique": "Acrylic on canvas", "format": "Statement Work", "price": "$4,500", "status": "Available", "image": "/images/available-car-087.jpg"}, {"code": "PA-139", "title": "Color Architecture", "collection": "Pure Abstraction", "dimensions": "100 x 240 cm", "technique": "Acrylic on canvas", "format": "Monumental Work", "price": "$6,500", "status": "Available", "image": "/images/available-pa-139.jpg"}, {"code": "CAR-092", "title": "Living Tide", "collection": "Cardúmenes", "dimensions": "100 x 240 cm", "technique": "Acrylic on canvas", "format": "Monumental Work", "price": "$7,000", "status": "Available", "image": "/images/available-car-092.jpg"}, {"code": "RIT-061", "title": "Ceremonial Table", "collection": "Rituals", "dimensions": "156 x 136 cm", "technique": "Acrylic on canvas", "format": "Statement Work", "price": "$5,200", "status": "Available", "image": "/images/available-rit-061.jpg"}, {"code": "PA-147", "title": "Vertical Balance", "collection": "Pure Abstraction", "dimensions": "160 x 80 cm", "technique": "Acrylic on canvas", "format": "Statement Work", "price": "$3,700", "status": "Available", "image": "/images/available-pa-147.jpg"}, {"code": "CAR-104", "title": "Collective Motion", "collection": "Cardúmenes", "dimensions": "140 x 225 cm", "technique": "Acrylic on canvas", "format": "Monumental Work", "price": "$8,500", "status": "Available", "image": "/images/available-car-104.jpg"}, {"code": "RIT-073", "title": "The Gathering", "collection": "Rituals", "dimensions": "77 x 100 cm", "technique": "Acrylic on canvas", "format": "Signature Work", "price": "$2,400", "status": "Available", "image": "/images/available-rit-073.jpg"}, {"code": "RIT-079", "title": "The Red Vessel", "collection": "Rituals", "dimensions": "140 x 190 cm", "technique": "Acrylic on canvas", "format": "Monumental Work", "price": "$7,000", "status": "Available", "image": "/images/available-rit-079.jpg"}, {"code": "RIT-103", "title": "Cup, Bowl, Gesture", "collection": "Rituals", "dimensions": "22 x 22 cm", "technique": "Acrylic on paper/canvas", "format": "Intimate Work", "price": "$600", "status": "Available as set of 2", "image": "/images/intimate-rit-103.jpg"}, {"code": "RIT-117", "title": "Quiet Object", "collection": "Rituals", "dimensions": "32 x 24 cm", "technique": "Acrylic on paper/canvas", "format": "Intimate Work", "price": "$350", "status": "Available", "image": "/images/intimate-rit-117.jpg"}, {"code": "RIT-124", "title": "Everyday Ceremony", "collection": "Rituals", "dimensions": "32 x 24 cm", "technique": "Acrylic on paper/canvas", "format": "Intimate Work", "price": "$1,200", "status": "Available as set of 4", "image": "/images/intimate-rit-124.jpg"}, {"code": "RIT-138", "title": "Small Rituals", "collection": "Rituals", "dimensions": "32 x 24 cm", "technique": "Acrylic on paper/canvas", "format": "Intimate Work", "price": "$700", "status": "Available as set of 2", "image": "/images/intimate-rit-138.jpg"}, {"code": "RIT-146", "title": "Two Vessels", "collection": "Rituals", "dimensions": "32 x 24 cm", "technique": "Acrylic on paper/canvas", "format": "Intimate Work", "price": "$900", "status": "Available as set of 3", "image": "/images/intimate-rit-146.jpg"}, {"code": "CAR-141", "title": "Small Current", "collection": "Cardúmenes", "dimensions": "32 x 24 cm", "technique": "Acrylic on paper/canvas", "format": "Intimate Work", "price": "$700", "status": "Available as set of 2", "image": "/images/intimate-car-141.jpg"}, {"code": "CAR-154", "title": "Red Tide Pair", "collection": "Cardúmenes", "dimensions": "32 x 24 cm", "technique": "Acrylic on paper/canvas", "format": "Intimate Work", "price": "$700", "status": "Available as set of 2", "image": "/images/intimate-car-154.jpg"}, {"code": "CAR-169", "title": "Shoals in Gold", "collection": "Cardúmenes", "dimensions": "32 x 24 cm", "technique": "Acrylic on paper/canvas", "format": "Intimate Work", "price": "$900", "status": "Available as set of 3", "image": "/images/intimate-car-169.jpg"}, {"code": "CF-041", "title": "Fragments in Dialogue", "collection": "Collected Fragments", "dimensions": "20 x 20 cm", "technique": "Mixed media / acrylic on paper", "format": "Intimate Work", "price": "$450", "status": "Available as set of 2", "image": "/images/cf-041.jpg"}, {"code": "CF-064", "title": "Layered Memory", "collection": "Collected Fragments", "dimensions": "20 x 20 cm", "technique": "Mixed media / acrylic on paper", "format": "Intimate Work", "price": "$250", "status": "Available", "image": "/images/cf-064.jpg"}, {"code": "CF-078", "title": "Cut and Memory", "collection": "Collected Fragments", "dimensions": "20 x 20 cm", "technique": "Mixed media / acrylic on paper", "format": "Intimate Work", "price": "$250", "status": "Available", "image": "/images/cf-078.jpg"}, {"code": "CF-083", "title": "Collected Fragment", "collection": "Collected Fragments", "dimensions": "20 x 20 cm", "technique": "Mixed media / acrylic on paper", "format": "Intimate Work", "price": "$250", "status": "Available", "image": "/images/cf-083.jpg"}, {"code": "CF-097", "title": "Paper Gesture", "collection": "Collected Fragments", "dimensions": "20 x 20 cm", "technique": "Mixed media / acrylic on paper", "format": "Intimate Work", "price": "$250", "status": "Available", "image": "/images/cf-097.jpg"}, {"code": "CF-105", "title": "The Cut Surface", "collection": "Collected Fragments", "dimensions": "20 x 20 cm", "technique": "Mixed media / acrylic on paper", "format": "Intimate Work", "price": "$250", "status": "Available", "image": "/images/cf-105.jpg"}, {"code": "CF-116", "title": "A Small Balance", "collection": "Collected Fragments", "dimensions": "20 x 20 cm", "technique": "Mixed media / acrylic on paper", "format": "Intimate Work", "price": "$250", "status": "Available", "image": "/images/cf-116.jpg"}, {"code": "CF-128", "title": "Intimate Fragment", "collection": "Collected Fragments", "dimensions": "22 x 16 cm", "technique": "Mixed media / acrylic on paper", "format": "Intimate Work", "price": "$450", "status": "Available as set of 2", "image": "/images/cf-128.jpg"}, {"code": "CF-152", "title": "Collected Wall", "collection": "Collected Fragments", "dimensions": "20 x 20 cm", "technique": "Mixed media / acrylic on paper", "format": "Intimate Work", "price": "$1,200", "status": "Available as set of 6", "image": "/images/cf-152-set.jpg"}, {"code": "CF-170", "title": "Private Rhythm", "collection": "Collected Fragments", "dimensions": "20 x 20 cm", "technique": "Mixed media / acrylic on paper", "format": "Intimate Work", "price": "$450", "status": "Available as set of 2", "image": "/images/cf-170.jpg"}, {"code": "CAR-126", "title": "Blue Gathering", "collection": "Cardúmenes", "dimensions": "60 x 40 cm", "technique": "Acrylic on paper/canvas", "format": "Signature Work", "price": "$1,400", "status": "Commission reference", "image": "/images/car-126.jpg"}, {"code": "CAR-190", "title": "Grey Shoals", "collection": "Cardúmenes", "dimensions": "32 x 24 cm", "technique": "Acrylic on paper/canvas", "format": "Intimate Work", "price": "$700", "status": "Available as set of 2", "image": "/images/car-190.jpg"}];
+const paintedObjects = [{"code": "OBJ-048", "title": "The Indoor Mountain", "collection": "Painted Objects", "dimensions": "Unique folding screen", "technique": "Hand-painted acrylic on folding screen", "format": "Painted Object", "price": "Private inquiry", "status": "Commission reference", "image": "/images/object-indoor-mountain.jpg", "description": "Hand-painted folding screen in acrylic, inspired by El Avila, Caracas."}];
+const collections = [{"name": "Cardúmenes", "tagline": "Shoals, currents and collective movement.", "desc": "More than a representation of the sea, Cardúmenes explores movement as a collective force. Direction, synchronicity, abundance and rhythm move through the composition, creating a sense of life in motion.", "image": "/images/available-car-104.jpg"}, {"name": "Rituals", "tagline": "Objects, pause and ceremony.", "desc": "In Rituals, objects detach from their everyday function and take on a ceremonial presence. Forms flatten, expand and overlap between the recognizable and the abstract.", "image": "/images/available-rit-061.jpg"}, {"name": "Pure Abstraction", "tagline": "Color, light, depth and balance.", "desc": "In Pure Abstraction, abstraction becomes a language of its own. Free, recurring and unmistakably personal forms emerge through color, light and depth.", "image": "/images/available-pa-139.jpg"}, {"name": "Collected Fragments", "tagline": "Small works, cut surfaces and layered memory.", "desc": "Collected Fragments brings together small-format works built through intuition, cutting and layering. They invite a closer, quieter and more detailed entrance into the artist’s universe.", "image": "/images/cf-152-set.jpg"}];
+const formats = [{"name": "Intimate Works", "short": "Small-scale works and curated sets for personal, layered spaces.", "fromp": "From $250", "key": "Intimate Work"}, {"name": "Signature Works", "short": "Medium-format pieces with a distinct visual identity.", "fromp": "From $2,000", "key": "Signature Work"}, {"name": "Statement Works", "short": "Large-scale works designed to anchor a room.", "fromp": "From $3,700", "key": "Statement Work"}, {"name": "Monumental Works", "short": "Oversized works with architectural presence.", "fromp": "Private inquiry", "key": "Monumental Work"}, {"name": "Painted Objects", "short": "Functional pieces transformed through painting.", "fromp": "Private inquiry", "key": "Painted Object"}];
+const allItems = [...works, ...paintedObjects];
 
 export default function TruusjeWebsite() {
-  const [format, setFormat] = useState("All");
-  const [collection, setCollection] = useState("All");
+  const [active, setActive] = useState(null);
+  const [collectionFilter, setCollectionFilter] = useState("All");
+  const [formatFilter, setFormatFilter] = useState("All");
 
   useEffect(() => {
-    const observer = new IntersectionObserver((entries) => entries.forEach((entry) => {
-      if (entry.isIntersecting) entry.target.classList.add("on");
-    }), { threshold: 0.08 });
-    document.querySelectorAll(".fu").forEach((el) => observer.observe(el));
-
-    const cursor = document.getElementById("cursor-dot");
-    const moveCursor = (e) => { if (cursor) { cursor.style.left = `${e.clientX}px`; cursor.style.top = `${e.clientY}px`; } };
-    const hoverables = document.querySelectorAll("a,button,.work-card,.format-card,.collection-panel,.arch-card,.hero-art-card");
-    const grow = () => cursor?.classList.add("big");
-    const shrink = () => cursor?.classList.remove("big");
-    document.addEventListener("mousemove", moveCursor);
-    hoverables.forEach((el) => { el.addEventListener("mouseenter", grow); el.addEventListener("mouseleave", shrink); });
-    return () => {
-      observer.disconnect();
-      document.removeEventListener("mousemove", moveCursor);
-      hoverables.forEach((el) => { el.removeEventListener("mouseenter", grow); el.removeEventListener("mouseleave", shrink); });
-    };
+    const obs = new IntersectionObserver((entries) => entries.forEach((e) => e.isIntersecting && e.target.classList.add("on")), { threshold: 0.08 });
+    document.querySelectorAll(".reveal").forEach((el) => obs.observe(el));
+    return () => obs.disconnect();
   }, []);
 
-  const scrollToId = (id) => document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
-  const goFormat = (name) => { setFormat(name); setCollection("All"); setTimeout(() => scrollToId("works"), 50); };
-  const goCollection = (name) => { setCollection(name); setFormat("All"); setTimeout(() => scrollToId("works"), 50); };
+  useEffect(() => {
+    const onKey = (e) => { if (e.key === "Escape") setActive(null); };
+    document.addEventListener("keydown", onKey);
+    return () => document.removeEventListener("keydown", onKey);
+  }, []);
 
-  const visibleWorks = allWorks.filter((w) => {
-    const formatMatch = format === "All" || w.format === format;
-    const collectionMatch = collection === "All" || w.collection === collection;
-    return formatMatch && collectionMatch;
-  });
+  const filteredWorks = useMemo(() => allItems.filter((w) => (collectionFilter === "All" || w.collection === collectionFilter) && (formatFilter === "All" || w.format === formatFilter)), [collectionFilter, formatFilter]);
+  const scrollToId = (id) => document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+
+  const setCollection = (name) => { setCollectionFilter(name); setFormatFilter("All"); setTimeout(() => scrollToId("catalogue"), 80); };
+  const setFormat = (key) => { setFormatFilter(key); setCollectionFilter("All"); setTimeout(() => scrollToId("catalogue"), 80); };
 
   return (
     <main className="site">
-      <div className="cursor-dot" id="cursor-dot" />
-
       <nav className="nav">
-        <button className="logo" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>Truusje Lemahieu</button>
+        <button className="logo" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>T. Lemahieu</button>
         <div className="nav-links">
-          <button onClick={() => scrollToId("works")}>Works</button>
-          <button onClick={() => scrollToId("formats")}>Formats</button>
           <button onClick={() => scrollToId("collections")}>Collections</button>
+          <button onClick={() => scrollToId("formats")}>Formats</button>
+          <button onClick={() => scrollToId("catalogue")}>Works</button>
+          <button onClick={() => scrollToId("objects")}>Objects</button>
           <button onClick={() => scrollToId("about")}>Artist</button>
           <button onClick={() => scrollToId("contact")}>Contact</button>
         </div>
@@ -280,110 +47,104 @@ export default function TruusjeWebsite() {
 
       <section className="hero">
         <div className="hero-bg" />
-        <div className="orbs"><div className="orb o1" /><div className="orb o2" /><div className="orb o3" /><div className="orb o4" /></div>
-        <div className="hero-content">
+        <div className="hero-content reveal on">
           <p className="eyebrow">Belgian artist · Venezuelan soul</p>
-          <h1 className="hero-title">Two worlds,<br /><em>one brush.</em></h1>
-          <p className="hero-sub">Abstract works built through color, light, depth, and balance — compositions where each brushstroke holds its place within a larger search for equilibrium.</p>
+          <h1>Two worlds,<br /><em>one brush.</em></h1>
+          <p>Abstract works built through color, light, depth and balance - from intimate collectible pieces to monumental works for architectural interiors.</p>
           <div className="cta-row">
-            <button className="btn-primary" onClick={() => scrollToId("works")}>View available works →</button>
-            <button className="btn-outline" onClick={() => scrollToId("formats")}>Find the right format</button>
+            <button className="btn-primary" onClick={() => scrollToId("collections")}>Browse by collection</button>
+            <button className="btn-outline" onClick={() => scrollToId("formats")}>Browse by format</button>
           </div>
         </div>
-        <div className="hero-art-card"><img src="/images/available-05.jpg" alt="Available monumental artwork by Truusje Lemahieu" /></div>
-        <div className="scroll-hint"><div className="scroll-line" /><span>Scroll</span></div>
+        <button className="hero-card" onClick={() => setActive(works.find(w => w.code === "CAR-104"))}><img src="/images/available-car-104.jpg" alt="Cardúmenes artwork" /></button>
       </section>
 
-      <section className="intro-strip"><p>Original works and commissions for private collectors, layered homes, refined interiors, hospitality spaces, and architectural walls.</p></section>
+      <section className="intro-strip"><p>The web is structured like a gallery: collections build the artistic narrative, while formats help collectors choose by scale, space and budget.</p></section>
 
-      <section className="sec works-section" id="works">
-        <div className="fu">
-          <div className="section-head">
-            <div><div className="sec-label">Available & Featured Works</div><h2 className="sec-title">A first entrance into the artist’s universe.</h2></div>
-            <p>Browse available pieces and selected commission references by format or collection. Each work can lead to availability details, pricing, or a tailored recommendation for a specific wall or space.</p>
-          </div>
-          <div className="filter-block">
-            <div>
-              <span>Format</span>
-              <div className="work-filters">{["All","Intimate","Signature","Statement","Monumental"].map((item) => <button key={item} className={format === item ? "active" : ""} onClick={() => { setFormat(item); setCollection("All"); }}>{item}</button>)}</div>
-            </div>
-            <div>
-              <span>Collection</span>
-              <div className="work-filters">{["All","Pure Abstraction","Cardúmenes","Rituals","Cacao","Collected Fragments"].map((item) => <button key={item} className={collection === item ? "active" : ""} onClick={() => { setCollection(item); setFormat("All"); }}>{item}</button>)}</div>
-            </div>
-          </div>
-          <div className="works-grid">{visibleWorks.map((work) => <WorkCard key={work.title} work={work} onContact={() => scrollToId("contact")} />)}</div>
+      <section id="collections" className="section collections-intro reveal">
+        <div className="section-head">
+          <div><p className="label">Browse by Collection</p><h2>Enter through the artist’s visual territories.</h2></div>
+          <p>The work of T. Lemahieu is born from a deep relationship with color, light, depth and balance. Each collection opens a territory of its own, where the eye enters, moves through and lingers.</p>
+        </div>
+        <div className="collection-cards">
+          {collections.map((c) => <button key={c.name} className="collection-card" onClick={() => setCollection(c.name)}>
+            <img src={c.image} alt={c.name} />
+            <div><span>{c.name}</span><h3>{c.tagline}</h3><p>{c.desc}</p><small>View works →</small></div>
+          </button>)}
         </div>
       </section>
 
-      <section className="formats-section" id="formats">
-        <div className="fu">
-          <div className="sec-label">Works by Format</div>
-          <h2 className="sec-title">Choose by scale, space, and presence.</h2>
-          <p className="format-intro">Format is not only a matter of size. It defines how the work enters a room: quietly, rhythmically, decisively, or architecturally.</p>
-          <div className="format-grid">{formats.map((f) => <FormatCard key={f.name} f={f} onClick={() => goFormat(f.name)} />)}</div>
+      <section id="formats" className="section formats reveal">
+        <p className="label">Browse by Format</p>
+        <h2>Discover available works by scale.</h2>
+        <p className="lead">From intimate collectible pieces to large-scale statement works for interiors, private collections and architectural spaces.</p>
+        <div className="format-grid">
+          {formats.map((f) => <button key={f.name} className="format-tile" onClick={() => setFormat(f.key)}>
+            <span>{f.name}</span><p>{f.short}</p><strong>{f.fromp}</strong><small>View this format →</small>
+          </button>)}
         </div>
       </section>
 
-      <section className="collections-section" id="collections">
-        <div className="fu">
-          <div className="sec-label">Collections</div>
-          <h2 className="sec-title">Territories of color, light, depth, and balance.</h2>
-          <p className="collections-intro">The work of T. Lemahieu is born from a deep relationship with color, light, depth, and balance. Her compositions create dimension through the layering of two-dimensional brushstrokes, carefully placed in relation to one another. Nothing is left to chance. Each gesture holds its place within a search for equilibrium, both vertical and horizontal.<br /><br />Color is never static in her work. It shifts, vibrates, and transforms according to the colors around it. Each collection opens a territory of its own, where the eye enters, moves through, and lingers.</p>
-          <div className="collection-stack">{collections.map((c, i) => <CollectionPanel key={c.name} c={c} index={i} onExplore={() => goCollection(c.name)} onContact={() => scrollToId("contact")} />)}</div>
+      <section id="catalogue" className="section catalogue reveal">
+        <div className="section-head">
+          <div><p className="label">Available Works</p><h2>{collectionFilter === "All" && formatFilter === "All" ? "Current selection" : collectionFilter !== "All" ? collectionFilter : formatFilter}</h2></div>
+          <p>Click any image to open it in large view with code, collection, dimensions, technique, format, availability and inquiry details.</p>
         </div>
+        <div className="filters">
+          <div><span>Collection</span>{["All", ...collections.map(c => c.name)].map((c) => <button key={c} className={collectionFilter === c ? "active" : ""} onClick={() => { setCollectionFilter(c); setFormatFilter("All"); }}>{c}</button>)}</div>
+          <div><span>Format</span>{["All", ...formats.map(f => f.key)].map((f) => <button key={f} className={formatFilter === f ? "active" : ""} onClick={() => { setFormatFilter(f); setCollectionFilter("All"); }}>{f === "All" ? "All" : f.replace(" Work", "")}</button>)}</div>
+        </div>
+        <div className="work-grid">
+          {filteredWorks.map((work) => <WorkCard key={work.code + work.title} work={work} onOpen={() => setActive(work)} />)}
+        </div>
+      </section>
+
+      <section id="objects" className="section objects reveal">
+        <div className="section-head"><div><p className="label">Painted Objects</p><h2>Functional pieces transformed through painting.</h2></div><p>Each object is conceived as a unique painted surface: chairs, screens and domestic forms transformed into collectible works.</p></div>
+        <div className="object-grid">{paintedObjects.map((obj) => <WorkCard key={obj.code} work={obj} onOpen={() => setActive(obj)} />)}</div>
       </section>
 
       <section id="about" className="about">
-        <div className="about-vis"><div className="about-photo-area real"><div className="photo-main"><img src="/images/truusje-portrait.jpg" alt="Truusje Lemahieu painting a large artwork" /></div><div className="photo-strip"><div className="photo-slot"><img src="/images/archive-press.jpg" alt="Press archive" /></div><div className="photo-slot"><img src="/images/archive-studio.jpg" alt="Studio archive" /></div><div className="photo-slot"><img src="/images/large-corner.jpg" alt="Artwork in interior" /></div></div></div></div>
-        <div className="about-content fu">
-          <div className="sec-label">The artist</div>
-          <h2 className="sec-title">Born in Belgium.<br />Shaped by <em>Venezuela.</em></h2>
-          <p className="about-bio">Truusje Lemahieu studied Fine Arts in Bruges, Paris and Brussels before leaving for Venezuela at 22 — where she would spend the next four decades. That choice defined her work entirely.</p>
-          <blockquote className="about-quote">“I left Belgium with a European eye. Venezuela gave me colour I didn’t know existed.”</blockquote>
-          <p className="about-bio">Her work carries a dialogue between European structure and tropical intensity: gesture, rhythm, color and instinct. Today, based again in Belgium, she paints daily — carrying both worlds in every brushstroke.</p>
-          <div className="about-stats"><Stat n="40+" label="Years creating" /><Stat n="6" label="Countries exhibited" /><Stat n="50+" label="Exhibitions & shows" /><Stat n="Int’l" label="Shipping worldwide" /></div>
-        </div>
-      </section>
-
-      <section id="archive" className="archive fu">
-        <div className="sec-label">Selected history</div>
-        <h2 className="sec-title">Archive</h2>
-        <div className="archive-grid with-images">{archive.map(([year, venue, loc, type, image]) => <article className="arch-card image-card" key={venue}><img src={image} alt={venue} /><div className="arch-card-body"><div className="arch-year">{year}</div><h3>{venue}</h3><p>{loc}</p><span>{type}</span></div></article>)}</div>
+        <div className="about-img"><img src="/images/truusje-portrait.jpg" alt="Truusje Lemahieu" /></div>
+        <div className="about-copy reveal"><p className="label">The Artist</p><h2>Born in Belgium. Shaped by Venezuela.</h2><p>Truusje Lemahieu studied Fine Arts in Bruges, Paris and Brussels before leaving for Venezuela at 22, where she would spend the next four decades. Her work carries a dialogue between European structure and tropical intensity: gesture, rhythm, color and instinct.</p><blockquote>“I left Belgium with a European eye. Venezuela gave me colour I didn’t know existed.”</blockquote></div>
       </section>
 
       <section id="contact" className="contact">
-        <div className="contact-l">
-          <h2>Begin<br />with <em>a work.</em></h2>
-          <div className="contact-detail"><ContactDetail label="Original works" value="Ask about availability, dimensions and pricing." /><ContactDetail label="Commissions" value="Create a work inspired by an existing piece, format or collection." /><ContactDetail label="Interior projects" value="Guidance for private homes, hospitality and architectural spaces." /><ContactDetail label="Instagram" value="@truusje.art" gold /></div>
-        </div>
-        <form className="contact-r fu">
-          <Field label="Your name" type="text" /><Field label="Email" type="email" />
-          <div className="fg"><label>I’m interested in</label><select defaultValue=""><option value="" disabled>—</option><option>Purchasing an available original</option><option>Commissioning a work inspired by an existing piece</option><option>Choosing the right format for my wall</option><option>Interior design / hospitality project</option><option>Requesting the catalogue</option></select></div>
-          <div className="fg"><label>Message</label><textarea placeholder="Tell us about the work, wall, collection or format you are interested in." /></div>
-          <button type="button" className="btn-send">Send inquiry →</button>
+        <div><p className="label">Inquiries</p><h2>Request pricing & availability.</h2><p>For large and special works, pricing is handled by private inquiry so the studio can share availability, placement details and commission options.</p></div>
+        <form>
+          <input placeholder="Name" />
+          <input placeholder="Email" />
+          <input placeholder="WhatsApp / Phone" />
+          <input placeholder="Country / City" />
+          <input placeholder="Artwork code of interest" />
+          <select defaultValue=""><option value="" disabled>Purchasing, commissioning or more information?</option><option>Purchasing</option><option>Commissioning</option><option>More information</option></select>
+          <textarea placeholder="Message" />
+          <button type="button" className="btn-primary">Send inquiry →</button>
+          <p className="thanks">Thank you for your inquiry. The studio will contact you shortly with pricing, availability and placement details for the selected work.</p>
         </form>
       </section>
 
-      <footer><div className="f-logo">T. Lemahieu</div><div>© 2026 Truusje Lemahieu</div><div className="f-links"><button>Instagram</button><button>Saatchi Art</button></div></footer>
+      <footer><div>T. Lemahieu</div><span>Abstract Fine Art</span></footer>
+
+      {active && <Lightbox work={active} onClose={() => setActive(null)} />}
     </main>
   );
 }
 
-function WorkCard({ work, onContact }) {
-  return <article className="work-card"><div className="work-img"><img src={work.image} alt={work.title} /></div><div className="work-body"><div className="work-kicker">{work.format} · {work.collection}</div><h3>{work.title}</h3><p>{work.dimensions}</p><p>{work.status}</p><span>{work.price}</span><button onClick={onContact}>Inquire about this work →</button></div></article>;
+function WorkCard({ work, onOpen }) {
+  return <article className="work-card">
+    <button className="work-img" onClick={onOpen}><img src={work.image} alt={work.title} /></button>
+    <div className="work-meta"><div className="tag-row"><span>{work.code}</span><span>{work.format}</span></div><h3>{work.title}</h3><p>{work.collection}</p><p>{work.dimensions} · {work.technique}</p><div className="status"><strong>{work.status}</strong><em>{work.price}</em></div><button onClick={onOpen}>Open details →</button></div>
+  </article>;
 }
 
-function FormatCard({ f, onClick }) {
-  return <article className="format-card"><div className="format-image"><img src={f.img} alt={`${f.name} format`} /></div><div className="format-copy"><p className="format-label">{f.subtitle}</p><h3>{f.name}</h3><p>{f.desc}</p><div className="format-meta"><span>{f.meta}</span><span>{f.best}</span></div><button onClick={onClick}>View {f.name} works →</button></div></article>;
+function Lightbox({ work, onClose }) {
+  return <div className="lightbox" role="dialog" aria-modal="true">
+    <button className="shade" onClick={onClose} aria-label="Close" />
+    <div className="lightbox-card">
+      <button className="close" onClick={onClose}>×</button>
+      <div className="lightbox-img"><img src={work.image} alt={work.title} /></div>
+      <div className="lightbox-info"><p className="label">{work.collection}</p><h2>{work.title}</h2><dl><dt>Code</dt><dd>{work.code}</dd><dt>Dimensions</dt><dd>{work.dimensions}</dd><dt>Technique</dt><dd>{work.technique}</dd><dt>Format</dt><dd>{work.format}</dd><dt>Availability</dt><dd>{work.status}</dd><dt>Price</dt><dd>{work.price}</dd></dl>{work.description && <p>{work.description}</p>}<a href="#contact" onClick={onClose}>Request pricing & availability →</a></div>
+    </div>
+  </div>;
 }
-
-function CollectionPanel({ c, index, onExplore, onContact }) {
-  return <article className="collection-panel"><div className="collection-copy"><div className="collection-number">{String(index + 1).padStart(2, "0")}</div><h3>{c.name}</h3><p className="collection-short">{c.short}</p><p className="collection-long">{c.desc}</p><div className="palette">{c.colors.map((color) => <span key={color} style={{ background: color }} />)}</div><div className="collection-actions"><button onClick={onExplore}>View works in this collection →</button><button onClick={onContact}>Inquire →</button></div></div><div className="collection-works">{c.imgs.map((image) => <img key={image} src={image} alt={`${c.name} related work`} />)}</div></article>;
-}
-
-function Stat({ n, label }) { return <div><div className="stat-n">{n}</div><div className="stat-l">{label}</div></div>; }
-
-function ContactDetail({ label, value, gold }) { return <><div className="c-label">{label}</div><div className={`c-val ${gold ? "gold" : ""}`}>{value}</div></>; }
-
-function Field({ label, type }) { return <div className="fg"><label>{label}</label><input type={type} placeholder="—" /></div>; }
