@@ -800,11 +800,11 @@ const T = {
     collectionsEyebrow: 'Browse by collection',
     collectionsTitle: 'Collections',
     collectionsText:
-      'The artist’s universe unfolds through recurring territories of movement, ritual, abstraction and fragment. Each collection proposes a different rhythm and emotional temperature.',
+      'The work of T. Lemahieu is born from a deep relationship with color, light, depth, and balance. Her compositions create dimension through the layering of two-dimensional brushstrokes, carefully placed in relation to one another. Nothing is left to chance. Each gesture holds its place within a search for equilibrium, both vertical and horizontal. Color is never static in her work. It shifts, vibrates, and transforms according to the colors around it. Each collection opens a territory of its own, where the eye enters, moves through, and lingers.',
     formatsEyebrow: 'Browse by format',
     formatsTitle: 'Choose by scale, space and presence',
     formatsText:
-      'From intimate works on paper to monumental canvases and painted objects, works can be explored by format and architectural presence.',
+      'Works may be approached through scale: from intimate pieces for personal, layered spaces to oversized works with architectural presence.',
     galleryEyebrow: 'Available works',
     galleryTitle: 'Gallery',
     galleryText:
@@ -849,6 +849,7 @@ const T = {
     purchasing: 'Acquisition',
     commission: 'Commission / special project',
     info: 'More information',
+    other: 'Other',
     message: 'Message',
     send: 'Send inquiry',
     belgium: 'Belgium',
@@ -885,11 +886,11 @@ const T = {
     collectionsEyebrow: 'Explorar por colección',
     collectionsTitle: 'Colecciones',
     collectionsText:
-      'El universo de la artista se despliega a través de territorios recurrentes de movimiento, ritual, abstracción y fragmento. Cada colección propone un ritmo y una temperatura emocional distinta.',
+      'La obra de T. Lemahieu nace de una relación profunda con el color, la luz, la profundidad y el equilibrio. Sus composiciones construyen dimensión a través de capas de pinceladas bidimensionales, cuidadosamente ubicadas en relación unas con otras. Nada queda al azar. Cada gesto ocupa su lugar dentro de una búsqueda de equilibrio, tanto vertical como horizontal. El color nunca es estático en su obra: cambia, vibra y se transforma según los colores que lo rodean. Cada colección abre un territorio propio, donde la mirada entra, recorre y permanece.',
     formatsEyebrow: 'Explorar por formato',
     formatsTitle: 'Elegir por escala, espacio y presencia',
     formatsText:
-      'Desde obras íntimas sobre papel hasta lienzos monumentales y objetos pintados, las piezas pueden explorarse por formato y presencia arquitectónica.',
+      'Las obras también pueden abordarse desde la escala: desde piezas íntimas para espacios personales y estratificados hasta obras sobredimensionadas con presencia arquitectónica.',
     galleryEyebrow: 'Obras disponibles',
     galleryTitle: 'Galería',
     galleryText:
@@ -934,6 +935,7 @@ const T = {
     purchasing: 'Adquisición',
     commission: 'Comisión / proyecto especial',
     info: 'Más información',
+    other: 'Otro',
     message: 'Mensaje',
     send: 'Enviar consulta',
     belgium: 'Bélgica',
@@ -950,48 +952,48 @@ const collectionDefs = [
     name: { en: 'Cardúmenes', es: 'Cardúmenes' },
     subtitle: { en: 'Shoals, currents and collective movement', es: 'Cardúmenes, corrientes y movimiento colectivo' },
     description: {
-      en: 'A field of directional energy where fish forms, movement and abundance become abstract composition.',
-      es: 'Un campo de energía direccional donde las formas de peces, el movimiento y la abundancia se vuelven composición abstracta.',
+      en: 'More than a representation of the sea, Cardúmenes explores movement as a collective force. Direction, synchronicity, abundance, and rhythm move through the composition, creating a sense of life in motion. Brushstrokes gather like living particles, shaping surfaces that seem to open inward. The eye moves through layers of color and light, as if entering a current. Each work offers an immersion, a space in flow where new planes, new depths, and a constant vibration of life begin to appear.',
+      es: 'Más que una representación del mar, Cardúmenes explora el movimiento como una fuerza colectiva. Dirección, sincronía, abundancia y ritmo atraviesan la composición, creando una sensación de vida en movimiento. Las pinceladas se reúnen como partículas vivas y construyen superficies que parecen abrirse hacia adentro. La mirada recorre capas de color y luz, como si entrara en una corriente. Cada obra ofrece una inmersión, un espacio en flujo donde empiezan a aparecer nuevos planos, nuevas profundidades y una vibración constante de vida.',
     },
   },
   {
     id: 'rituals',
     keys: ['Rituals'],
     name: { en: 'Rituals', es: 'Rituales' },
-    subtitle: { en: 'Domestic signs and repeated gestures', es: 'Signos domésticos y gestos repetidos' },
+    subtitle: { en: 'Object, pause and ceremony', es: 'Objeto, pausa y ceremonia' },
     description: {
-      en: 'Bowls, vessels and interior rituals appear as intimate abstract structures charged with memory.',
-      es: 'Cuencos, recipientes y rituales del interior aparecen como estructuras abstractas íntimas cargadas de memoria.',
+      en: 'In Rituals, objects detach from their everyday function and take on a ceremonial presence. The artist shifts perspective, crosses planes, and brings different points of view into a single composition. Forms flatten, expand, overlap, and become sculptural. Between the recognizable and the abstract, color intensifies the emotion of each element, light builds atmosphere, and depth emerges from the tension between surface and space. The everyday ceases to be ordinary and becomes pause, gathering, presence, and ceremony.',
+      es: 'En Rituals, los objetos se desprenden de su función cotidiana y adquieren una presencia ceremonial. La artista desplaza la perspectiva, cruza planos y reúne distintos puntos de vista en una misma composición. Las formas se aplanan, se expanden, se superponen y se vuelven escultóricas. Entre lo reconocible y lo abstracto, el color intensifica la emoción de cada elemento, la luz construye atmósfera y la profundidad emerge de la tensión entre superficie y espacio. Lo cotidiano deja de ser ordinario y se convierte en pausa, encuentro, presencia y ceremonia.',
     },
   },
   {
     id: 'pure-abstraction',
     keys: ['Pure Abstraction'],
     name: { en: 'Pure Abstraction', es: 'Abstracción Pura' },
-    subtitle: { en: 'Gesture, color and scale', es: 'Gesto, color y escala' },
+    subtitle: { en: 'Gesture, color and visual force', es: 'Gesto, color y fuerza visual' },
     description: {
-      en: 'Large chromatic fields and marks create works with a direct architectural and atmospheric presence.',
-      es: 'Grandes campos cromáticos y marcas crean obras con una presencia arquitectónica y atmosférica directa.',
+      en: 'In Pure Abstraction, abstraction becomes a language of its own. Free, recurring, and unmistakably personal forms emerge through color, light, and depth, creating compositions that do not need to represent in order to hold presence. Each work exists through its own visual force. The eye enters a territory of gestures, planes, and forms that belong to the most essential universe of T. Lemahieu. Beneath the apparent freedom of the composition lies a precise balance, where every brushstroke is placed with intention.',
+      es: 'En Pure Abstraction, la abstracción se convierte en un lenguaje propio. Formas libres, recurrentes e inconfundiblemente personales emergen a través del color, la luz y la profundidad, creando composiciones que no necesitan representar para sostener presencia. Cada obra existe por su propia fuerza visual. La mirada entra en un territorio de gestos, planos y formas que pertenecen al universo más esencial de T. Lemahieu. Bajo la aparente libertad de la composición existe un equilibrio preciso, donde cada pincelada está colocada con intención.',
     },
   },
   {
     id: 'collected-fragments',
     keys: ['Collected Fragments'],
     name: { en: 'Collected Fragments', es: 'Fragmentos Reunidos' },
-    subtitle: { en: 'Small pieces, intimate constellations', es: 'Pequeñas piezas, constelaciones íntimas' },
+    subtitle: { en: 'Archive, fragment and recomposition', es: 'Archivo, fragmento y recomposición' },
     description: {
-      en: 'Fragments gather into compact visual clusters — small in scale, but dense in language and rhythm.',
-      es: 'Los fragmentos se reúnen en constelaciones visuales compactas: pequeñas en escala, pero densas en lenguaje y ritmo.',
+      en: 'Collected Fragments brings together small-format works built through intuition, cutting, and layering. They are intimate and tactile pieces, close to the gesture of archive, fragment, and recomposition. Depth appears through the relationship between layers of paper, color, texture, cuts, encounters, accidents, and intuitive decisions. Through their scale, each piece invites a closer, more private gaze, a quieter and more detailed entrance into the artist’s universe.',
+      es: 'Collected Fragments reúne obras de pequeño formato construidas desde la intuición, el corte y la superposición. Son piezas íntimas y táctiles, cercanas al gesto de archivo, fragmento y recomposición. La profundidad aparece a través de la relación entre capas de papel, color, textura, cortes, encuentros, accidentes y decisiones intuitivas. Por su escala, cada pieza invita a una mirada más cercana y privada, una entrada más silenciosa y detallada al universo de la artista.',
     },
   },
 ];
 
 const formatDefs = [
-  { id: 'Intimate', label: { en: 'Intimate works', es: 'Obras íntimas' }, note: { en: 'For shelves, desks and intimate walls.', es: 'Para repisas, escritorios y muros íntimos.' } },
-  { id: 'Signature', label: { en: 'Signature works', es: 'Obras signature' }, note: { en: 'Medium-scale works with clear identity.', es: 'Obras de escala media con identidad clara.' } },
-  { id: 'Statement', label: { en: 'Statement works', es: 'Obras statement' }, note: { en: 'Works that anchor a room.', es: 'Obras que anclan un espacio.' } },
-  { id: 'Monumental', label: { en: 'Monumental works', es: 'Obras monumentales' }, note: { en: 'Architectural-scale pieces with presence.', es: 'Piezas de escala arquitectónica con presencia.' } },
-  { id: 'Painted Objects', label: { en: 'Painted objects', es: 'Objetos pintados' }, note: { en: 'Functional objects transformed by painting.', es: 'Objetos funcionales transformados por la pintura.' } },
+  { id: 'Intimate', label: { en: 'Intimate', es: 'Íntimo' }, note: { en: 'Collected small-scale works for personal, layered spaces.', es: 'Obras de pequeña escala para espacios personales y estratificados.' } },
+  { id: 'Signature', label: { en: 'Signature', es: 'Signature' }, note: { en: 'Medium-format pieces with a distinct visual identity.', es: 'Piezas de formato medio con una identidad visual marcada.' } },
+  { id: 'Statement', label: { en: 'Statement', es: 'Statement' }, note: { en: 'Large-scale works designed to anchor a room.', es: 'Obras de gran escala diseñadas para anclar un espacio.' } },
+  { id: 'Monumental', label: { en: 'Monumental', es: 'Monumental' }, note: { en: 'Oversized works with architectural presence.', es: 'Obras sobredimensionadas con presencia arquitectónica.' } },
+  { id: 'Painted Objects', label: { en: 'Painted Objects', es: 'Objetos Pintados' }, note: { en: 'Functional pieces transformed through painting.', es: 'Piezas funcionales transformadas a través de la pintura.' } },
 ];
 
 function translateStatus(status, t) {
@@ -1079,7 +1081,7 @@ function EditorialImageSet({ codes }) {
 
 function CollectionSection({ def, lang, setCollection, scrollToGallery }) {
   return (
-    <article className="collection-row" id={def.id}>
+    <article className="collection-row" id={def.id} onClick={() => { setCollection(def.id); scrollToGallery(); }}>
       <div className="collection-copy">
         <div className="mini-kicker">{lang === 'en' ? 'Collection' : 'Colección'}</div>
         <h3>{def.name[lang]}</h3>
@@ -1101,7 +1103,7 @@ function FormatCard({ def, lang, setFormat, scrollToGallery }) {
   const sampleCode = (FORMAT_SELECTIONS[def.id] || [])[0];
   const sampleWork = sampleCode ? workByCode(sampleCode) : null;
   return (
-    <article className="format-card">
+    <article className="format-card" onClick={() => { setFormat(def.id); scrollToGallery(); }}>
       {sampleWork ? (
         <figure>
           <img src={sampleWork.context || sampleWork.main} alt={sampleWork.code} />
@@ -1128,15 +1130,15 @@ function ArtworkFigure({ work, t, onOpen }) {
   const current = views[index] || work.main;
   return (
     <article className="artwork-figure">
-      <div className="artwork-image-wrap">
+      <button className="artwork-image-wrap clickable-artwork" type="button" onClick={() => onOpen(work)}>
         <img src={current} alt={work.code} />
-        {views.length > 1 ? (
-          <button className="image-toggle" onClick={() => setIndex((index + 1) % views.length)}>
-            {t.nextView}
-          </button>
-        ) : null}
-      </div>
-      <div className="artwork-caption">
+      </button>
+      {views.length > 1 ? (
+        <button className="image-toggle" onClick={() => setIndex((index + 1) % views.length)}>
+          {t.nextView}
+        </button>
+      ) : null}
+      <button className="artwork-caption clickable-caption" type="button" onClick={() => onOpen(work)}>
         <div className="tag-row">
           <span className="tag">{work.code}</span>
           {work.format ? <span className="tag">{work.format}</span> : null}
@@ -1148,8 +1150,8 @@ function ArtworkFigure({ work, t, onOpen }) {
           <span>{translateStatus(work.status, t) || t.available}</span>
           <span>{work.price || t.priceUponRequest}</span>
         </div>
-        <button className="secondary-button" onClick={() => onOpen(work)}>{t.viewDetails}</button>
-      </div>
+        <span className="caption-link">{t.viewDetails}</span>
+      </button>
     </article>
   );
 }
@@ -1209,6 +1211,7 @@ function ContactSection({ t }) {
             <option>{t.purchasing}</option>
             <option>{t.commission}</option>
             <option>{t.info}</option>
+            <option>{t.other}</option>
           </select>
           <textarea className="span-2" placeholder={t.message} />
         </div>
