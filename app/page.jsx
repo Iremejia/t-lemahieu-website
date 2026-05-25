@@ -780,14 +780,15 @@ const T = {
       ['archive', 'Archive'],
       ['contact', 'Contact'],
     ],
-    heroEyebrow: 'Belgian abstract artist',
-    heroTitle: 'A private gallery universe of color, gesture and memory.',
+    heroEyebrow: 'Belgian artist · Venezuelan soul',
+    heroTitleLine1: 'Two worlds,',
+    heroTitleLine2: 'one brush.',
     heroText:
-      'T. Lemahieu brings together European formation and tropical experience in a body of work defined by chromatic force, abstract gesture and a quiet but unmistakable presence.',
+      'Abstract works built through color, light, depth, and balance — compositions where each brushstroke holds its place within a larger search for equilibrium.',
     viewWorks: 'View collection',
     contactStudio: 'Inquire',
     uniqueStatement:
-      'Every work is an original piece by the artist. The website is conceived as a private gallery presentation — spacious, editorial and intimate.',
+      'All works are unique and original pieces, painted by the artist.',
     bioEyebrow: 'Biography',
     bioTitle: 'The artist',
     bioLead: 'Belgium · Venezuela · United States · Germany · France · Netherlands · Russia',
@@ -816,7 +817,7 @@ const T = {
     specialEyebrow: 'Special projects',
     specialTitle: 'Unique works for particular spaces',
     specialText:
-      'Special requests may be considered based on the artist’s existing styles, visual language and reference works. Every resulting piece remains unique and original; the intention is not to reproduce a previous work, but to create a singular piece in dialogue with her universe.',
+      'Special requests may be considered based on the artist’s existing styles, visual language and reference works. Every resulting piece remains unique and original.',
     contactEyebrow: 'Contact',
     contactTitle: 'Inquire about works or projects',
     contactText:
@@ -866,14 +867,15 @@ const T = {
       ['archive', 'Archivo'],
       ['contact', 'Contacto'],
     ],
-    heroEyebrow: 'Artista abstracta belga',
-    heroTitle: 'Un universo de galería privada hecho de color, gesto y memoria.',
+    heroEyebrow: 'Artista belga · alma venezolana',
+    heroTitleLine1: 'Dos mundos,',
+    heroTitleLine2: 'un pincel.',
     heroText:
-      'T. Lemahieu reúne la formación europea y la experiencia tropical en una obra marcada por la fuerza cromática, el gesto abstracto y una presencia silenciosa pero inconfundible.',
+      'Obras abstractas construidas a través del color, la luz, la profundidad y el equilibrio: composiciones donde cada pincelada ocupa su lugar dentro de una búsqueda mayor de armonía.',
     viewWorks: 'Ver colección',
     contactStudio: 'Consultar',
     uniqueStatement:
-      'Cada obra es una pieza original de la artista. La web está concebida como una presentación de galería privada: amplia, editorial e íntima.',
+      'Todas las obras son piezas únicas y originales, pintadas por la artista.',
     bioEyebrow: 'Biografía',
     bioTitle: 'La artista',
     bioLead: 'Bélgica · Venezuela · Estados Unidos · Alemania · Francia · Holanda · Rusia',
@@ -902,7 +904,7 @@ const T = {
     specialEyebrow: 'Proyectos especiales',
     specialTitle: 'Piezas únicas para espacios particulares',
     specialText:
-      'Se pueden considerar solicitudes especiales basadas en los estilos existentes, el lenguaje visual y obras de referencia de la artista. Cada pieza resultante sigue siendo única y original; la intención no es reproducir una obra anterior, sino crear una pieza singular en diálogo con su universo.',
+      'Se pueden considerar solicitudes especiales basadas en los estilos existentes, el lenguaje visual y obras de referencia de la artista. Cada pieza resultante sigue siendo única y original.',
     contactEyebrow: 'Contacto',
     contactTitle: 'Consultar sobre obras o proyectos',
     contactText:
@@ -1287,7 +1289,7 @@ export default function Page() {
       <section className="hero section-frame">
         <div className="hero-copy">
           <span className="section-kicker">{t.heroEyebrow}</span>
-          <h1>{t.heroTitle}</h1>
+          <h1><span>{t.heroTitleLine1}</span><br /><em>{t.heroTitleLine2}</em></h1>
           <p>{t.heroText}</p>
           <div className="hero-actions">
             <a href="#gallery" className="primary-button">{t.viewWorks}</a>
@@ -1403,13 +1405,6 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="section-frame special-projects">
-        <div className="section-head narrow">
-          <span className="section-kicker">{t.specialEyebrow}</span>
-          <h2>{t.specialTitle}</h2>
-          <p>{t.specialText}</p>
-        </div>
-      </section>
 
       <section id="archive" className="section-frame">
         <div className="section-head narrow">
@@ -1427,6 +1422,10 @@ export default function Page() {
           <span className="section-kicker">{t.contactEyebrow}</span>
           <h2>{t.contactTitle}</h2>
           <p>{t.contactText}</p>
+        </div>
+        <div className="contact-special-note">
+          <span className="mini-kicker">{t.specialEyebrow}</span>
+          <p>{t.specialText}</p>
         </div>
         <ContactSection t={t} />
       </section>
