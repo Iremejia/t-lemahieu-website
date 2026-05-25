@@ -1039,3 +1039,14 @@ body {
     padding: 14px;
   }
 }
+
+/* Final micro-adjustment: move only the homepage hero text and buttons 2cm to the right */
+.hero-copy {
+  margin-left: 2cm;
+}
+
+@media (max-width: 760px) {
+  .hero-copy {
+    margin-left: 0;
+  }
+}
